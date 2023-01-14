@@ -45,17 +45,17 @@
 			border: none;
 		}
 		::-webkit-scrollbar-thumb {
-			background: rgba(100, 100, 100, 0.3); 
+			background: rgba(100, 100, 100, 0.3);
 			border-radius: 5px;
 		}
 		::-webkit-scrollbar-track:hover {
-			background: rgba(0, 0, 0, 0.1); 
+			background: rgba(0, 0, 0, 0.1);
 		}
 		::-webkit-scrollbar-thumb:hover {
-			background: rgba(100, 100, 100, 0.7); 
+			background: rgba(100, 100, 100, 0.7);
 		}
 
-		
+
 
 		/* Remove top padding and margin from first child so that top of rendered text is aligned to top of text editor text */
 
@@ -72,7 +72,7 @@
 			margin-top: 0;
 			padding-top: 0;
 		}
-		
+
 		p, h1, h2, h3, h4, h5, h6, ul, table {
 			margin-top: .6em;
 			margin-bottom: 1.35em;
@@ -145,7 +145,7 @@
 			margin-right: 0.4em;
 			background-color:  #155BDA;
 		}
-    /* These icons are obtained from the wonderful ForkAwesome project by copying the src svgs 
+    /* These icons are obtained from the wonderful ForkAwesome project by copying the src svgs
      * into the css classes below.
      * svgs are obtained from https://github.com/ForkAwesome/Fork-Awesome/tree/master/src/icons/svg
      * instead of the svg width, height property you must use a viewbox here, 0 0 1536 1792 is typically the actual size of the icon
@@ -257,7 +257,7 @@
 			max-width: 100%;
 			height: auto;
 		}
-		
+
 		.inline-code,
 		.mce-content-body code {
 			border: 1px solid rgb(220, 220, 220);
@@ -401,7 +401,7 @@
 				height: auto !important;
 			}
 		}
-	
+
 
 				/*
 					FOR THE MARKDOWN EDITOR
@@ -419,7 +419,7 @@
 					margin-left: -1.71em;
 					margin-right: 0.7em;
 				}
-				
+
 				ul.joplin-checklist {
 					list-style:none;
 				}
@@ -454,7 +454,7 @@
 				}
 
 				.fountain .title-page,
-				.fountain .page { 
+				.fountain .page {
 					box-shadow: 0 0 5px rgba(0,0,0,0.1);
 					border: 1px solid #d2d2d2;
 					padding: 10%;
@@ -542,27 +542,27 @@
 <p>真的很简单，只有三个节点！（算上材质输出节点有四个）</p>
 </blockquote>
 <p>首先为猴头新建材质，映入你眼帘的应该是熟悉的原理化BSDF和材质输出。</p>
-<p><img src="../../../_resources/cc8217b78ab94dd89c71545f91110066.png" alt="22cac5d31338aaaa0d2659abd389ea6b.png"></p>
+<p><img src="https://vientostudio.github.io/三渲二完全手册/resources/cc8217b78ab94dd89c71545f91110066.png" alt="22cac5d31338aaaa0d2659abd389ea6b.png"></p>
 <p>直接删除原理化BSDF，新建 Basic 节点组，连接到材质输出上。Basic 节点组是搭建一切三渲二材质的基础，你以后会经常新建它。</p>
-<p><img src="../../../_resources/2fb9acde2eee4ba187004d8c60c8b6ed.png" alt="3feac5cb4a74851dd16ed288d925a377.png"></p>
+<p><img src="https://vientostudio.github.io/三渲二完全手册/resources/2fb9acde2eee4ba187004d8c60c8b6ed.png" alt="3feac5cb4a74851dd16ed288d925a377.png"></p>
 <p>现在把视图着色切换到渲染。</p>
-<p><img src="../../../_resources/c75a063e1d0c4c48a16d1f41428b410e.png" alt="9811ea2940e30a768eb49a836136c53b.png"><br>
-<img src="../../../_resources/86bd477c9539418db9b16a1b8e88ade9.png" alt="55b615547d63199d36aa849659dad9f7.png"></p>
+<p><img src="https://vientostudio.github.io/三渲二完全手册/resources/c75a063e1d0c4c48a16d1f41428b410e.png" alt="9811ea2940e30a768eb49a836136c53b.png"><br>
+<img src="https://vientostudio.github.io/三渲二完全手册/resources/86bd477c9539418db9b16a1b8e88ade9.png" alt="55b615547d63199d36aa849659dad9f7.png"></p>
 <p>太棒了！现在你得到了一个……呃……一片蓝色的猴头？</p>
 <p>不要慌，你没做错任何事，这就是三渲二节点的特征——它会为物体平面地着色，所有部分都会被相同的着色。这有点类似你在二维平面绘画中使用油漆桶的功能。</p>
 <p>然而，一片相同的颜色毫无疑问是乏味的。为了体现光照，在绘画上我们会在物体的背光面画上阴影。为了在三渲二材质节点中做到这一点，新建一个 Lighting 节点组并且把它放在 Basic 节点组的左边。把它的 RGB 输出连接到 Basic 节点组的 Key Light Group 主灯光组输入上。先不用管所有那些奇奇怪怪的输出，我们会在第三章讲这个的。</p>
-<p><img src="../../../_resources/f09bbbb7014c4bad96e43a052b37915c.png" alt="0f0abca7bf14e2e773d0f0c670abea90.png"></p>
+<p><img src="https://vientostudio.github.io/三渲二完全手册/resources/f09bbbb7014c4bad96e43a052b37915c.png" alt="0f0abca7bf14e2e773d0f0c670abea90.png"></p>
 <p>瞧，你的猴头现在有明暗的变化了！（为啥我感觉我写出来的教程像是谷歌翻译出来的那味？可能是我这样的教程看多了？）</p>
 <p>好吧，但这个材质现在看起来还是不像三渲二材质，似乎和刚才的原理化BSDF也没什么区别。但不要心急，我们需要的仅仅是一点点魔法……出来吧，颜色渐变！新建一个颜色渐变节点在 Lighting 和 Basic 的连接之间。就像这样：</p>
-<p><img src="../../../_resources/5490813d232b467184272714747d8683.png" alt="cb061c4c489fdb0cc59685ae48d728ff.png"></p>
+<p><img src="https://vientostudio.github.io/三渲二完全手册/resources/5490813d232b467184272714747d8683.png" alt="cb061c4c489fdb0cc59685ae48d728ff.png"></p>
 <p>接下来，只要我们拖动颜色渐变的滑块，让黑块和白块靠的非常近，就会有神奇的事情发生……</p>
-<p><img src="../../../_resources/755f18b5ef4d4e94a9af4963275ec390.png" alt="636a0a11b2568cc5046ef516e62a2429.png"></p>
+<p><img src="https://vientostudio.github.io/三渲二完全手册/resources/755f18b5ef4d4e94a9af4963275ec390.png" alt="636a0a11b2568cc5046ef516e62a2429.png"></p>
 <p>把猴头沿Z轴旋转90度看看，让光能照到正面：</p>
-<p><img src="../../../_resources/4d60ef6e00ab45e3b7a0facab3a70c67.png" alt="b1ef49b46bdf71ff27007d658012133a.png"></p>
+<p><img src="https://vientostudio.github.io/三渲二完全手册/resources/4d60ef6e00ab45e3b7a0facab3a70c67.png" alt="b1ef49b46bdf71ff27007d658012133a.png"></p>
 <p>看！这样物体的明暗分界线变得分明了，类似二次元绘画风格。现在终于有了那么一丝三渲二的味道。当然，你可能还觉得不满意，那就在颜色渐变的黑块和白块之间再新增一个灰色滑块，然后，把插值类型从线性改成常值：</p>
-<p><img src="../../../_resources/6fa3e2c8f19c4880b573a8959d93c098.png" alt="239fe4c5891d4207c9b10d4cf7d5d24c.png"></p>
+<p><img src="https://vientostudio.github.io/三渲二完全手册/resources/6fa3e2c8f19c4880b573a8959d93c098.png" alt="239fe4c5891d4207c9b10d4cf7d5d24c.png"></p>
 <p>接下来只要稍微移动滑块……</p>
-<p><img src="../../../_resources/4936a3e6b58d42278b48f49159d4e3e5.png" alt="87953491a8c95b120780872a63bb4ecf.png"></p>
+<p><img src="https://vientostudio.github.io/三渲二完全手册/resources/4936a3e6b58d42278b48f49159d4e3e5.png" alt="87953491a8c95b120780872a63bb4ecf.png"></p>
 <p>这下子真有内味了。感受到颜色渐变的强大之处了吗？没错，用颜色渐变节点可以非常方便的控制阴影边缘的表现。颜色渐变的默认插值类型是线性，但常值会在三渲二中经常用到，因为它会提供分明的阴影边缘。</p>
 <p>通过 Basic 节点组的基础色和阴影颜色输入，你可以非常方便的控制物体颜色和阴影的明暗程度。而通过颜色渐变节点，你可以非常方便的控制阴影边缘的位置和表现。这就是最简单的三渲二材质了，欢迎入门！</p>
 <p>（如果你奇怪为什么默认颜色是蓝色的话，我喜欢蓝色。至于为什么是这种蓝？我随手取的色。）</p>
@@ -570,4 +570,3 @@
 </div></div>
 					</body>
 				</html>
-			

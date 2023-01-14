@@ -45,17 +45,17 @@
 			border: none;
 		}
 		::-webkit-scrollbar-thumb {
-			background: rgba(100, 100, 100, 0.3); 
+			background: rgba(100, 100, 100, 0.3);
 			border-radius: 5px;
 		}
 		::-webkit-scrollbar-track:hover {
-			background: rgba(0, 0, 0, 0.1); 
+			background: rgba(0, 0, 0, 0.1);
 		}
 		::-webkit-scrollbar-thumb:hover {
-			background: rgba(100, 100, 100, 0.7); 
+			background: rgba(100, 100, 100, 0.7);
 		}
 
-		
+
 
 		/* Remove top padding and margin from first child so that top of rendered text is aligned to top of text editor text */
 
@@ -72,7 +72,7 @@
 			margin-top: 0;
 			padding-top: 0;
 		}
-		
+
 		p, h1, h2, h3, h4, h5, h6, ul, table {
 			margin-top: .6em;
 			margin-bottom: 1.35em;
@@ -145,7 +145,7 @@
 			margin-right: 0.4em;
 			background-color:  #155BDA;
 		}
-    /* These icons are obtained from the wonderful ForkAwesome project by copying the src svgs 
+    /* These icons are obtained from the wonderful ForkAwesome project by copying the src svgs
      * into the css classes below.
      * svgs are obtained from https://github.com/ForkAwesome/Fork-Awesome/tree/master/src/icons/svg
      * instead of the svg width, height property you must use a viewbox here, 0 0 1536 1792 is typically the actual size of the icon
@@ -257,7 +257,7 @@
 			max-width: 100%;
 			height: auto;
 		}
-		
+
 		.inline-code,
 		.mce-content-body code {
 			border: 1px solid rgb(220, 220, 220);
@@ -401,7 +401,7 @@
 				height: auto !important;
 			}
 		}
-	
+
 
 				/*
 					FOR THE MARKDOWN EDITOR
@@ -419,7 +419,7 @@
 					margin-left: -1.71em;
 					margin-right: 0.7em;
 				}
-				
+
 				ul.joplin-checklist {
 					list-style:none;
 				}
@@ -454,7 +454,7 @@
 				}
 
 				.fountain .title-page,
-				.fountain .page { 
+				.fountain .page {
 					box-shadow: 0 0 5px rgba(0,0,0,0.1);
 					border: 1px solid #d2d2d2;
 					padding: 10%;
@@ -545,22 +545,22 @@
 <h4 id="光栅化渲染引擎">光栅化渲染引擎</h4>
 <p>狭义的<strong>光栅化</strong>（在 GPU 中称为光栅化阶段／rasterization stage）只计算图元覆盖信息，而不会计算颜色。不过我们这里介绍的是广义的光栅化渲染原理。</p>
 <p>在光栅化算法中，会把组成物体的三角形图元投影到屏幕空间上形成片元。图中每个方格都是一个像素：</p>
-<p><img src="../../_resources/ff42ed32207d464a8406b5b6e8498493.png" alt="5a4da1c8c2970a9c0d6de115b7791ae4.png"></p>
+<p><img src="https://vientostudio.github.io/三渲二完全手册/resources/ff42ed32207d464a8406b5b6e8498493.png" alt="5a4da1c8c2970a9c0d6de115b7791ae4.png"></p>
 <p>接下来，逐个计算每个像素的中心点是否在三角形内，如果是，就把这个像素染上三角形面的材质的颜色（如果不是就放弃，一般对没有物体的地方有默认填充颜色）。这个判断像素是否位于三角形中的点叫<strong>采样点</strong>。这就是光栅化的过程，很简单吧？</p>
-<p><img src="../../_resources/b99b5939c07a472eb94a4312aecb68b4.png" alt="b899cb633367b73c2ee8586c6b003b81.png"></p>
+<p><img src="https://vientostudio.github.io/三渲二完全手册/resources/b99b5939c07a472eb94a4312aecb68b4.png" alt="b899cb633367b73c2ee8586c6b003b81.png"></p>
 <p>好吧，但其实没那么简单。你可以注意到，这样生成的图像锯齿太明显了，肯定不会好看。有没有什么办法可以解决这个问题呢。</p>
 <p>办法当然是有的，对于每个像素，我们可以不使用一个点来判断颜色，而是使用四个点！</p>
-<p><img src="../../_resources/7083aab6234041fb9eed635d8f9c56b5.png" alt="e7682b9d67c9f1cfefc603ddf2d47039.png"></p>
+<p><img src="https://vientostudio.github.io/三渲二完全手册/resources/7083aab6234041fb9eed635d8f9c56b5.png" alt="e7682b9d67c9f1cfefc603ddf2d47039.png"></p>
 <p>图中每个像素格都分四个点采样，通过这样的方式，我们可以得到表现好得多的抗锯齿图像：</p>
-<p><img src="../../_resources/c79ba2b4ef204951985d377cf041511e.png" alt="30f1009c521617281257ebe69093dbe3.png"></p>
+<p><img src="https://vientostudio.github.io/三渲二完全手册/resources/c79ba2b4ef204951985d377cf041511e.png" alt="30f1009c521617281257ebe69093dbe3.png"></p>
 <p>这种方法就是大名鼎鼎的 <strong>MSAA（MultiSampling Anti-Aliasing 多重采样抗锯齿）</strong>，被广泛应用的一种渲染阶段抗锯齿技术（SSAA（Super Sampling Anti-Aliasing 超采样抗锯齿）也是相似的原理，但它侧重点在一个特定的分辨率上把采样提高N倍）。而聪明的你肯定已经猜到了， <strong>Eevee 渲染选项中的采样的数字参数，就是指一个像素中会使用多少采样点。</strong>（不好意思，如果你想把学到的知识推而广之的话，Cycles 作为光线追踪引擎，它的采样参数含义不完全一样。后面会讲）</p>
-<p><img src="../../_resources/d7be3805f2a246b8ad9b017264d17b7f.png" alt="a709707a1c1c2b0a19855da868a20ec6.png"></p>
+<p><img src="https://vientostudio.github.io/三渲二完全手册/resources/d7be3805f2a246b8ad9b017264d17b7f.png" alt="a709707a1c1c2b0a19855da868a20ec6.png"></p>
 <p>使用1次采样渲染设置的 Eevee 渲染结果的细节，你可以注意到有非常明显的锯齿。</p>
-<p><img src="../../_resources/746a27d346d64ef9b337123b01a66e4f.png" alt="1e08a350f9d7e29f6640109ed7917b97.png"></p>
+<p><img src="https://vientostudio.github.io/三渲二完全手册/resources/746a27d346d64ef9b337123b01a66e4f.png" alt="1e08a350f9d7e29f6640109ed7917b97.png"></p>
 <p>4次采样自然多了。</p>
-<p><img src="../../_resources/1acd41752a8842918e9dcc97a76cf685.png" alt="f4d2d5107cfe8451897de81fbe85ccb1.png"></p>
+<p><img src="https://vientostudio.github.io/三渲二完全手册/resources/1acd41752a8842918e9dcc97a76cf685.png" alt="f4d2d5107cfe8451897de81fbe85ccb1.png"></p>
 <p>16次采样又有进步。</p>
-<p><img src="../../_resources/f89efc4052c44863a950f38852a8a6ca.png" alt="ed8b9ac4836d9fab473ea0062e33b45c.png"></p>
+<p><img src="https://vientostudio.github.io/三渲二完全手册/resources/f89efc4052c44863a950f38852a8a6ca.png" alt="ed8b9ac4836d9fab473ea0062e33b45c.png"></p>
 <p>如果你自己动手去试一试，你可以注意到，在超过16次采样后，画质的提升就不明显了。很多人将使用 Cycles 这样的光线追踪引擎的使用经验带到了 Eevee 上，把采样拉的奇高无比（几千甚至上万采样）。我不得不遗憾的通知你：采样拉太高真的没用。其实如果不是为了阴影边缘的表现，连默认的64次采样也显得偏高了，如果你真的缺乏渲染资源，或者仅仅是想渲染快点看个大概结果，直接把采样设置到16是没有问题的。</p>
 <h4 id="光线追踪渲染引擎">光线追踪渲染引擎</h4>
 <p>// TODO：赶工完成这份手册太忙了，来不及写Cycles原理的介绍了，以后再补。</p>
@@ -568,4 +568,3 @@
 </div></div>
 					</body>
 				</html>
-			

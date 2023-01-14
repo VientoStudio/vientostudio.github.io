@@ -45,17 +45,17 @@
 			border: none;
 		}
 		::-webkit-scrollbar-thumb {
-			background: rgba(100, 100, 100, 0.3); 
+			background: rgba(100, 100, 100, 0.3);
 			border-radius: 5px;
 		}
 		::-webkit-scrollbar-track:hover {
-			background: rgba(0, 0, 0, 0.1); 
+			background: rgba(0, 0, 0, 0.1);
 		}
 		::-webkit-scrollbar-thumb:hover {
-			background: rgba(100, 100, 100, 0.7); 
+			background: rgba(100, 100, 100, 0.7);
 		}
 
-		
+
 
 		/* Remove top padding and margin from first child so that top of rendered text is aligned to top of text editor text */
 
@@ -72,7 +72,7 @@
 			margin-top: 0;
 			padding-top: 0;
 		}
-		
+
 		p, h1, h2, h3, h4, h5, h6, ul, table {
 			margin-top: .6em;
 			margin-bottom: 1.35em;
@@ -145,7 +145,7 @@
 			margin-right: 0.4em;
 			background-color:  #155BDA;
 		}
-    /* These icons are obtained from the wonderful ForkAwesome project by copying the src svgs 
+    /* These icons are obtained from the wonderful ForkAwesome project by copying the src svgs
      * into the css classes below.
      * svgs are obtained from https://github.com/ForkAwesome/Fork-Awesome/tree/master/src/icons/svg
      * instead of the svg width, height property you must use a viewbox here, 0 0 1536 1792 is typically the actual size of the icon
@@ -257,7 +257,7 @@
 			max-width: 100%;
 			height: auto;
 		}
-		
+
 		.inline-code,
 		.mce-content-body code {
 			border: 1px solid rgb(220, 220, 220);
@@ -401,7 +401,7 @@
 				height: auto !important;
 			}
 		}
-	
+
 
 				/*
 					FOR THE MARKDOWN EDITOR
@@ -419,7 +419,7 @@
 					margin-left: -1.71em;
 					margin-right: 0.7em;
 				}
-				
+
 				ul.joplin-checklist {
 					list-style:none;
 				}
@@ -454,7 +454,7 @@
 				}
 
 				.fountain .title-page,
-				.fountain .page { 
+				.fountain .page {
 					box-shadow: 0 0 5px rgba(0,0,0,0.1);
 					border: 1px solid #d2d2d2;
 					padding: 10%;
@@ -542,23 +542,22 @@
 <p>我真的需要一个更简洁明了的好标题。</p>
 </blockquote>
 <p>简单来说，这一章的主角是 Camera 和 Parallax 和 UV 节点组</p>
-<p><img src="../../../_resources/af05ddd80782430488991f6f4c86108a.png" alt="801decaae5c95cd35a354e0c37410806.png"></p>
+<p><img src="https://vientostudio.github.io/三渲二完全手册/resources/af05ddd80782430488991f6f4c86108a.png" alt="801decaae5c95cd35a354e0c37410806.png"></p>
 <p>（我　们　仨）</p>
 <p>它们的共同点是都提供矢量输出，用来给各种纹理节点生成纹理用的。咱们先从最简单的 UV 开始。</p>
-<p>好吧，似乎不用开始，UV 节点就是单纯的把 UV 贴图节点<img src="../../../_resources/6773da0154664da5b5910e0a7ccd250e.png" alt="5353a8528ee5aea121d1d260aac9dedc.png"><br>
+<p>好吧，似乎不用开始，UV 节点就是单纯的把 UV 贴图节点<img src="https://vientostudio.github.io/三渲二完全手册/resources/6773da0154664da5b5910e0a7ccd250e.png" alt="5353a8528ee5aea121d1d260aac9dedc.png"><br>
 给包装了一遍。大家应该都会用。</p>
 <p>接下来是 Camera 节点，它把所有数据映射到摄像机空间的变换包装了一下。如果我们把 Camera 节点的位置输出直接接到材质输出上，你可以看到被直接转换成颜色的矢量：</p>
-<p><img src="../../../_resources/dd6a0791189e416aa91e1ccc2dec38b3.png" alt="7d277e9dcbe7ff80305ddfc740bfed86.png"></p>
+<p><img src="https://vientostudio.github.io/三渲二完全手册/resources/dd6a0791189e416aa91e1ccc2dec38b3.png" alt="7d277e9dcbe7ff80305ddfc740bfed86.png"></p>
 <p>这里有个材质调试技巧：你注意过矢量是如何被直接转换成颜色的吗？其实挺简单的，X值转R，Y值转G，Z值转B。如果值小于0就会被钳制到0，如果大于1就会被钳制到1。所以从图中我们就可以看出来，右上角的白色代表着在那个区域XYZ均为正值，左上角的天蓝是蓝绿混合，代表着那个区域X为负，YZ为正。左下角的蓝色区域很明显是只有Z为正。这样，我们就可以通过颜色直接看出矢量值的正负。</p>
 <p>尝试移动一下视角你会发现，这个矢量位置根本不随视角的移动而出现变化，永远和屏幕保持一致，因为 Camera 节点组把这些位置都转换成屏幕空间了。</p>
-<p><img src="../../../_resources/c70497bab7274fce894b6c6eacd79746.png" alt="286c9374241895ab376fb1248285bcc5.png"></p>
+<p><img src="https://vientostudio.github.io/三渲二完全手册/resources/c70497bab7274fce894b6c6eacd79746.png" alt="286c9374241895ab376fb1248285bcc5.png"></p>
 <p>现在，你大概也能看出来，下面的 Screen Position 输出就是把位置输出的Z值直接恒设为0了。其他的输出的含义可以以此类推。（再次吐槽懒狗教程）</p>
 <p>Parallex 节点组是最神奇的，它主要使用在平面上，所以让我们把猴头隐藏，新建一个立方体（在第零章中被删掉的立方体：？），然后给它专门创建一个实验材质，我们使用沃罗诺伊纹理，把随机调到零来体现 Parallex 的输出：</p>
-<p><img src="../../../_resources/f2a6f9ebf19d48f4b7d29f11b2fb7ecd.png" alt="36c105e28c5698eae083a4622408a3b0.png"></p>
+<p><img src="https://vientostudio.github.io/三渲二完全手册/resources/f2a6f9ebf19d48f4b7d29f11b2fb7ecd.png" alt="36c105e28c5698eae083a4622408a3b0.png"></p>
 <p>现在是见证奇迹的时刻，转动一下视角看一看这个材质吧。</p>
 <p>没错，Parallex 节点可以用于产生视差的纹理，但因为其计算原理的原因，只适合用在平面上。如果你想给某个屋内场景的窗户添加一个屋外背景，又不想搭建真的场景，那这个节点将会是你的不二选择！</p>
 <p>上一章：<a data-from-md title='https://vientostudio.github.io/%E4%B8%89%E6%B8%B2%E4%BA%8C%E5%AE%8C%E5%85%A8%E6%89%8B%E5%86%8C/%E6%9D%90%E8%B4%A8%E5%92%8C%E5%85%89%E7%85%A7/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E6%9E%97%E5%AE%9D%E4%B8%89%E6%B8%B2%E4%BA%8C%E6%9D%90%E8%B4%A8%E6%95%99%E7%A8%8B/%E7%AC%AC%E4%B8%83%E7%AB%A0%20%E8%8F%B2%E6%B6%85%E5%B0%94%EF%BC%88%E4%BB%A5%E5%8F%8A%E4%B8%80%E4%B8%AA%E8%BF%9B%E9%98%B6%E7%94%A8%E6%B3%95%EF%BC%89.html' href='https://vientostudio.github.io/%E4%B8%89%E6%B8%B2%E4%BA%8C%E5%AE%8C%E5%85%A8%E6%89%8B%E5%86%8C/%E6%9D%90%E8%B4%A8%E5%92%8C%E5%85%89%E7%85%A7/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E6%9E%97%E5%AE%9D%E4%B8%89%E6%B8%B2%E4%BA%8C%E6%9D%90%E8%B4%A8%E6%95%99%E7%A8%8B/%E7%AC%AC%E4%B8%83%E7%AB%A0%20%E8%8F%B2%E6%B6%85%E5%B0%94%EF%BC%88%E4%BB%A5%E5%8F%8A%E4%B8%80%E4%B8%AA%E8%BF%9B%E9%98%B6%E7%94%A8%E6%B3%95%EF%BC%89.html'>第七章 菲涅尔（以及一个进阶用法）</a>　<a data-from-md title='https://vientostudio.github.io/%E4%B8%89%E6%B8%B2%E4%BA%8C%E5%AE%8C%E5%85%A8%E6%89%8B%E5%86%8C/%E7%9B%AE%E5%BD%95.html' href='https://vientostudio.github.io/%E4%B8%89%E6%B8%B2%E4%BA%8C%E5%AE%8C%E5%85%A8%E6%89%8B%E5%86%8C/%E7%9B%AE%E5%BD%95.html'>目录</a>　下一章：<a data-from-md title='https://vientostudio.github.io/%E4%B8%89%E6%B8%B2%E4%BA%8C%E5%AE%8C%E5%85%A8%E6%89%8B%E5%86%8C/%E6%9D%90%E8%B4%A8%E5%92%8C%E5%85%89%E7%85%A7/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E6%9E%97%E5%AE%9D%E4%B8%89%E6%B8%B2%E4%BA%8C%E6%9D%90%E8%B4%A8%E6%95%99%E7%A8%8B/%E7%AC%AC%E5%8D%81%E4%B8%89%E7%AB%A0%20%E4%B8%96%E7%95%8C%E7%8E%AF%E5%A2%83%E6%9D%90%E8%B4%A8.html' href='https://vientostudio.github.io/%E4%B8%89%E6%B8%B2%E4%BA%8C%E5%AE%8C%E5%85%A8%E6%89%8B%E5%86%8C/%E6%9D%90%E8%B4%A8%E5%92%8C%E5%85%89%E7%85%A7/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E6%9E%97%E5%AE%9D%E4%B8%89%E6%B8%B2%E4%BA%8C%E6%9D%90%E8%B4%A8%E6%95%99%E7%A8%8B/%E7%AC%AC%E5%8D%81%E4%B8%89%E7%AB%A0%20%E4%B8%96%E7%95%8C%E7%8E%AF%E5%A2%83%E6%9D%90%E8%B4%A8.html'>第十三章 世界环境材质</a></p>
 </div></div>
 					</body>
 				</html>
-			

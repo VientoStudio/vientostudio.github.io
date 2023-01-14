@@ -45,17 +45,17 @@
 			border: none;
 		}
 		::-webkit-scrollbar-thumb {
-			background: rgba(100, 100, 100, 0.3); 
+			background: rgba(100, 100, 100, 0.3);
 			border-radius: 5px;
 		}
 		::-webkit-scrollbar-track:hover {
-			background: rgba(0, 0, 0, 0.1); 
+			background: rgba(0, 0, 0, 0.1);
 		}
 		::-webkit-scrollbar-thumb:hover {
-			background: rgba(100, 100, 100, 0.7); 
+			background: rgba(100, 100, 100, 0.7);
 		}
 
-		
+
 
 		/* Remove top padding and margin from first child so that top of rendered text is aligned to top of text editor text */
 
@@ -72,7 +72,7 @@
 			margin-top: 0;
 			padding-top: 0;
 		}
-		
+
 		p, h1, h2, h3, h4, h5, h6, ul, table {
 			margin-top: .6em;
 			margin-bottom: 1.35em;
@@ -145,7 +145,7 @@
 			margin-right: 0.4em;
 			background-color:  #155BDA;
 		}
-    /* These icons are obtained from the wonderful ForkAwesome project by copying the src svgs 
+    /* These icons are obtained from the wonderful ForkAwesome project by copying the src svgs
      * into the css classes below.
      * svgs are obtained from https://github.com/ForkAwesome/Fork-Awesome/tree/master/src/icons/svg
      * instead of the svg width, height property you must use a viewbox here, 0 0 1536 1792 is typically the actual size of the icon
@@ -257,7 +257,7 @@
 			max-width: 100%;
 			height: auto;
 		}
-		
+
 		.inline-code,
 		.mce-content-body code {
 			border: 1px solid rgb(220, 220, 220);
@@ -401,7 +401,7 @@
 				height: auto !important;
 			}
 		}
-	
+
 
 				/*
 					FOR THE MARKDOWN EDITOR
@@ -419,7 +419,7 @@
 					margin-left: -1.71em;
 					margin-right: 0.7em;
 				}
-				
+
 				ul.joplin-checklist {
 					list-style:none;
 				}
@@ -454,7 +454,7 @@
 				}
 
 				.fountain .title-page,
-				.fountain .page { 
+				.fountain .page {
 					box-shadow: 0 0 5px rgba(0,0,0,0.1);
 					border: 1px solid #d2d2d2;
 					padding: 10%;
@@ -548,13 +548,13 @@
 // TODO：写写级联大小的影响和原理。</p>
 <p><strong>启用高位深可以改善因为计算精度的问题导致的阴影错误，但会拖慢渲染速度</strong>。高位深基本上就是把数据从float类型转成了double类型进行计算，可以减少计算过程中的精度损失。但double类型比float类型多占一倍的存储空间，因此会拖慢计算速度。</p>
 <p><strong>柔和阴影可以使阴影边缘变得柔和（废话）</strong>。这个设置在高采样下表现更好，因为高采样可以防止阴影映射产生的边缘锯齿，否则你的柔和边缘也是锯齿状的：</p>
-<p><img src="../../_resources/b016444b24b24a8d9f9b8db7b83e1721.png" alt="fc03fe27b921c51f5e3b6c7e3eca4c75.png"></p>
+<p><img src="https://vientostudio.github.io/三渲二完全手册/resources/b016444b24b24a8d9f9b8db7b83e1721.png" alt="fc03fe27b921c51f5e3b6c7e3eca4c75.png"></p>
 <p>（真是悲剧啊！）</p>
 <p>这应该是唯一一个可以让你拉高采样的理由。但还是记得别乱拉采样！</p>
 <p><strong>光照阈值控制产生影响的最小光照</strong>。相似的设置还有灯光裁剪选项。把这个选项调高可以限制灯光的影响范围，便于搭建场景。不过在前面的 材质 部分已经讲过了如何通过三色灯光组隔离灯光影响。如果运用得当这个设置几乎不用调整。</p>
 <h2 id="色彩管理">色彩管理</h2>
 <p>如果你足够细心的话，你会发现，新建一个文件后，调整出来的材质颜色和渲染出来的结果是不一致的。这是因为 Blender 新文件的渲染设置中，色彩管理的查看变换默认为Filmic：</p>
-<p><img src="../../_resources/7d04008085a94960ad90502bcd923734.png" alt="c289bc950e84bfa64663bcaed12023b1.png"></p>
+<p><img src="https://vientostudio.github.io/三渲二完全手册/resources/7d04008085a94960ad90502bcd923734.png" alt="c289bc950e84bfa64663bcaed12023b1.png"></p>
 <p>这就好像给渲染结果加了一层滤镜，所以颜色就不一样了。如果你不想让颜色变换，只要将查看变换设置为 标准 就可以。</p>
 <p>这对美术来说意义较大，因为在传统二维手绘动画中，毫无疑问上色时使用什么颜色就会呈现出什么颜色，不会有什么奇怪的变化。这样就方便美术调整最终画面效果了。</p>
 <p>（可惜我们好缺美术啊呜呜呜）</p>
@@ -562,4 +562,3 @@
 </div></div>
 					</body>
 				</html>
-			

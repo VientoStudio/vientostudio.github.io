@@ -45,17 +45,17 @@
 			border: none;
 		}
 		::-webkit-scrollbar-thumb {
-			background: rgba(100, 100, 100, 0.3); 
+			background: rgba(100, 100, 100, 0.3);
 			border-radius: 5px;
 		}
 		::-webkit-scrollbar-track:hover {
-			background: rgba(0, 0, 0, 0.1); 
+			background: rgba(0, 0, 0, 0.1);
 		}
 		::-webkit-scrollbar-thumb:hover {
-			background: rgba(100, 100, 100, 0.7); 
+			background: rgba(100, 100, 100, 0.7);
 		}
 
-		
+
 
 		/* Remove top padding and margin from first child so that top of rendered text is aligned to top of text editor text */
 
@@ -72,7 +72,7 @@
 			margin-top: 0;
 			padding-top: 0;
 		}
-		
+
 		p, h1, h2, h3, h4, h5, h6, ul, table {
 			margin-top: .6em;
 			margin-bottom: 1.35em;
@@ -145,7 +145,7 @@
 			margin-right: 0.4em;
 			background-color:  #155BDA;
 		}
-    /* These icons are obtained from the wonderful ForkAwesome project by copying the src svgs 
+    /* These icons are obtained from the wonderful ForkAwesome project by copying the src svgs
      * into the css classes below.
      * svgs are obtained from https://github.com/ForkAwesome/Fork-Awesome/tree/master/src/icons/svg
      * instead of the svg width, height property you must use a viewbox here, 0 0 1536 1792 is typically the actual size of the icon
@@ -257,7 +257,7 @@
 			max-width: 100%;
 			height: auto;
 		}
-		
+
 		.inline-code,
 		.mce-content-body code {
 			border: 1px solid rgb(220, 220, 220);
@@ -401,7 +401,7 @@
 				height: auto !important;
 			}
 		}
-	
+
 
 				/*
 					FOR THE MARKDOWN EDITOR
@@ -419,7 +419,7 @@
 					margin-left: -1.71em;
 					margin-right: 0.7em;
 				}
-				
+
 				ul.joplin-checklist {
 					list-style:none;
 				}
@@ -454,7 +454,7 @@
 				}
 
 				.fountain .title-page,
-				.fountain .page { 
+				.fountain .page {
 					box-shadow: 0 0 5px rgba(0,0,0,0.1);
 					border: 1px solid #d2d2d2;
 					padding: 10%;
@@ -542,31 +542,30 @@
 <p>陶瓷，哑光，金属……这些材质类型都要依靠这两个节点啦。</p>
 </blockquote>
 <p>先来认识 Specular 节点组。新建一个 Specular 节点组，然后把它接到 Basic 节点组的高光输入上。（没错，Specular 是高光的意思，如果你在思考为什么节点接口命名中英文混用，那么实际上我所有命名都是英语的，但 Blender 会自动把认识的节点接口单词翻译成中文）</p>
-<p><img src="../../../_resources/f4c67c33aa2a40bb9827e68ebe446fde.png" alt="dcca69d42c5b8b9457588fb0dc330bf5.png"></p>
+<p><img src="https://vientostudio.github.io/三渲二完全手册/resources/f4c67c33aa2a40bb9827e68ebe446fde.png" alt="dcca69d42c5b8b9457588fb0dc330bf5.png"></p>
 <p>瞧这油光发亮的猴头脑门儿。</p>
-<p><img src="../../../_resources/e297255a14e84092994e9fff4fd0d946.png" alt="e369e19532ca5c57bbe6da7d80c4bd31.png"></p>
+<p><img src="https://vientostudio.github.io/三渲二完全手册/resources/e297255a14e84092994e9fff4fd0d946.png" alt="e369e19532ca5c57bbe6da7d80c4bd31.png"></p>
 <p>接下来让我们看看 Specular 节点组的参数。高光色彩当然就是用来控制高光色彩的，我们可以稍微改成淡蓝色以契合物体的本色。我们依然先不管那个 Key Light Group 参数是什么意思，这是第三章灯光组的内容。</p>
 <p>你可以自己试试看，下面的强度，尺寸，糙度，柔和都可以不同程度的影响高光的效果（真是懒狗教程）。最后一个向量球是为了给你微调高光位置而存在的，稍微滚动一下就能调整位置，很好用。</p>
 <p>通过灵活的参数调整你可以试出来各种不同风格的材质。</p>
 <p>把糙度和柔和调的比较大就可以获得有些哑光质感的反光面。<br>
-<img src="../../../_resources/6fd2dc94f5164bbb95d8dbf3fb261e05.png" alt="415e32bb1686e2843809e737169e5cab.png"></p>
+<img src="https://vientostudio.github.io/三渲二完全手册/resources/6fd2dc94f5164bbb95d8dbf3fb261e05.png" alt="415e32bb1686e2843809e737169e5cab.png"></p>
 <p>把柔和调的比较小就可以获得类似陶瓷或者玻璃的光滑反光面。<br>
-<img src="../../../_resources/07d585f93aa54b6194a0c75e4aa0f56a.png" alt="95a39afc7fad8bb5983674e8a1cd36ef.png"></p>
+<img src="https://vientostudio.github.io/三渲二完全手册/resources/07d585f93aa54b6194a0c75e4aa0f56a.png" alt="95a39afc7fad8bb5983674e8a1cd36ef.png"></p>
 <p>接下来，让我们来介绍 Metallic 节点组。新建一个 Metallic 节点组并将输出接到 Basic 节点组的金属度输入上。</p>
-<p><img src="../../../_resources/72f856c287f644c196e7f1743154d8de.png" alt="bede62234931b8d43606f910e5066015.png"></p>
+<p><img src="https://vientostudio.github.io/三渲二完全手册/resources/72f856c287f644c196e7f1743154d8de.png" alt="bede62234931b8d43606f910e5066015.png"></p>
 <p>效果真是立竿见影。</p>
 <p>草，我懒得介绍下面的参数了，简洁易懂，自己试试看吧。</p>
 <p>不过旋转值得一说，当你给圆柱加金属材质时，你可能会遇见尴尬的情况。</p>
-<p><img src="../../../_resources/26618e287cf043fb972362a107f8763d.png" alt="01af187b4cd99a16a156e8bb407aeeac.png"></p>
+<p><img src="https://vientostudio.github.io/三渲二完全手册/resources/26618e287cf043fb972362a107f8763d.png" alt="01af187b4cd99a16a156e8bb407aeeac.png"></p>
 <p>金属反光条纹哪去了？这是因为 Metallic 节点组是使用物体表面法向映射到Z轴的变化计算花纹的，而圆柱体表面的法向都在XY平面上，因此就没有变化差异。为了解决这个问题，你就需要把节点旋转90度。</p>
-<p><img src="../../../_resources/8112ba09d65f4c01889ae7351ee4ecb1.png" alt="13d05c13800512e6f529e7b994bb7686.png"></p>
+<p><img src="https://vientostudio.github.io/三渲二完全手册/resources/8112ba09d65f4c01889ae7351ee4ecb1.png" alt="13d05c13800512e6f529e7b994bb7686.png"></p>
 <p>这样才会有花纹。</p>
 <p>还有一点可以额外的提一句，当你使用 Metallic 节点组的时候，你很容易感觉材质过亮了。</p>
-<p><img src="../../../_resources/afad8fdb4b51467aba3ef7482a2b2c8f.png" alt="edfd4b82190286c79039a3fec79fc264.png"></p>
+<p><img src="https://vientostudio.github.io/三渲二完全手册/resources/afad8fdb4b51467aba3ef7482a2b2c8f.png" alt="edfd4b82190286c79039a3fec79fc264.png"></p>
 <p>因此，为了保证材质明暗合适，你可能需要在增加材质金属度的同时降低 Basic 节点组基础色的亮度。</p>
 <p>（好吧，因为这些材质过亮的反馈，我现在觉得 Metallic 节点组默认金属度为1可能是个失误，毕竟用到这么高金属度的地方属实不多，还要手动调低，也许下一版材质节点我会把这个默认值调低一些。）</p>
 <p>上一章：<a data-from-md title='https://vientostudio.github.io/%E4%B8%89%E6%B8%B2%E4%BA%8C%E5%AE%8C%E5%85%A8%E6%89%8B%E5%86%8C/%E6%9D%90%E8%B4%A8%E5%92%8C%E5%85%89%E7%85%A7/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E6%9E%97%E5%AE%9D%E4%B8%89%E6%B8%B2%E4%BA%8C%E6%9D%90%E8%B4%A8%E6%95%99%E7%A8%8B/%E7%AC%AC%E4%B8%80%E7%AB%A0%20%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84%E4%B8%89%E6%B8%B2%E4%BA%8C%E6%9D%90%E8%B4%A8.html' href='https://vientostudio.github.io/%E4%B8%89%E6%B8%B2%E4%BA%8C%E5%AE%8C%E5%85%A8%E6%89%8B%E5%86%8C/%E6%9D%90%E8%B4%A8%E5%92%8C%E5%85%89%E7%85%A7/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E6%9E%97%E5%AE%9D%E4%B8%89%E6%B8%B2%E4%BA%8C%E6%9D%90%E8%B4%A8%E6%95%99%E7%A8%8B/%E7%AC%AC%E4%B8%80%E7%AB%A0%20%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84%E4%B8%89%E6%B8%B2%E4%BA%8C%E6%9D%90%E8%B4%A8.html'>第一章 最简单的三渲二材质</a>　<a data-from-md title='https://vientostudio.github.io/%E4%B8%89%E6%B8%B2%E4%BA%8C%E5%AE%8C%E5%85%A8%E6%89%8B%E5%86%8C/%E7%9B%AE%E5%BD%95.html' href='https://vientostudio.github.io/%E4%B8%89%E6%B8%B2%E4%BA%8C%E5%AE%8C%E5%85%A8%E6%89%8B%E5%86%8C/%E7%9B%AE%E5%BD%95.html'>目录</a>　下一章：<a data-from-md title='https://vientostudio.github.io/%E4%B8%89%E6%B8%B2%E4%BA%8C%E5%AE%8C%E5%85%A8%E6%89%8B%E5%86%8C/%E6%9D%90%E8%B4%A8%E5%92%8C%E5%85%89%E7%85%A7/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E6%9E%97%E5%AE%9D%E4%B8%89%E6%B8%B2%E4%BA%8C%E6%9D%90%E8%B4%A8%E6%95%99%E7%A8%8B/%E7%AC%AC%E4%B8%89%E7%AB%A0%20%E5%85%89%E7%85%A7%E8%8A%82%E7%82%B9.html' href='https://vientostudio.github.io/%E4%B8%89%E6%B8%B2%E4%BA%8C%E5%AE%8C%E5%85%A8%E6%89%8B%E5%86%8C/%E6%9D%90%E8%B4%A8%E5%92%8C%E5%85%89%E7%85%A7/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E6%9E%97%E5%AE%9D%E4%B8%89%E6%B8%B2%E4%BA%8C%E6%9D%90%E8%B4%A8%E6%95%99%E7%A8%8B/%E7%AC%AC%E4%B8%89%E7%AB%A0%20%E5%85%89%E7%85%A7%E8%8A%82%E7%82%B9.html'>第三章 光照节点</a></p>
 </div></div>
 					</body>
 				</html>
-			

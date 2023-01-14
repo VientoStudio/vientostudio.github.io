@@ -45,17 +45,17 @@
 			border: none;
 		}
 		::-webkit-scrollbar-thumb {
-			background: rgba(100, 100, 100, 0.3); 
+			background: rgba(100, 100, 100, 0.3);
 			border-radius: 5px;
 		}
 		::-webkit-scrollbar-track:hover {
-			background: rgba(0, 0, 0, 0.1); 
+			background: rgba(0, 0, 0, 0.1);
 		}
 		::-webkit-scrollbar-thumb:hover {
-			background: rgba(100, 100, 100, 0.7); 
+			background: rgba(100, 100, 100, 0.7);
 		}
 
-		
+
 
 		/* Remove top padding and margin from first child so that top of rendered text is aligned to top of text editor text */
 
@@ -72,7 +72,7 @@
 			margin-top: 0;
 			padding-top: 0;
 		}
-		
+
 		p, h1, h2, h3, h4, h5, h6, ul, table {
 			margin-top: .6em;
 			margin-bottom: 1.35em;
@@ -145,7 +145,7 @@
 			margin-right: 0.4em;
 			background-color:  #155BDA;
 		}
-    /* These icons are obtained from the wonderful ForkAwesome project by copying the src svgs 
+    /* These icons are obtained from the wonderful ForkAwesome project by copying the src svgs
      * into the css classes below.
      * svgs are obtained from https://github.com/ForkAwesome/Fork-Awesome/tree/master/src/icons/svg
      * instead of the svg width, height property you must use a viewbox here, 0 0 1536 1792 is typically the actual size of the icon
@@ -257,7 +257,7 @@
 			max-width: 100%;
 			height: auto;
 		}
-		
+
 		.inline-code,
 		.mce-content-body code {
 			border: 1px solid rgb(220, 220, 220);
@@ -401,7 +401,7 @@
 				height: auto !important;
 			}
 		}
-	
+
 
 				/*
 					FOR THE MARKDOWN EDITOR
@@ -419,7 +419,7 @@
 					margin-left: -1.71em;
 					margin-right: 0.7em;
 				}
-				
+
 				ul.joplin-checklist {
 					list-style:none;
 				}
@@ -454,7 +454,7 @@
 				}
 
 				.fountain .title-page,
-				.fountain .page { 
+				.fountain .page {
 					box-shadow: 0 0 5px rgba(0,0,0,0.1);
 					border: 1px solid #d2d2d2;
 					padding: 10%;
@@ -543,34 +543,34 @@
 </blockquote>
 <p>为啥我们需要阴影遮罩？因为当你建模场景上完材质调整灯光的时候，你发现总有地方的光照不尽如人意。要么是不该亮的地方亮了，要么是不该暗的地方暗了。接下来，让我们首先看看如何用阴影遮罩来应对第一种情况。</p>
 <p>我们先回到最简单的三渲二材质，然后创建一个图像纹理节点：</p>
-<p><img src="../../../_resources/88af44dd526d4ec198794b7cbca20af1.png" alt="2bf0507b2c4ef77f83f85138d26c635a.png"></p>
+<p><img src="https://vientostudio.github.io/三渲二完全手册/resources/88af44dd526d4ec198794b7cbca20af1.png" alt="2bf0507b2c4ef77f83f85138d26c635a.png"></p>
 <p>把图像纹理节点的颜色输出接到 Basic 节点组的 Shadow Mask 输入上，你会发现整个猴头都暗了下来，但不慌，这是因为我们还没创建贴图。接下来新建一张贴图，大小随意，Alpha用不着，背景色为白色，最后给这张贴图起一个帅气的名字——猴头阴影遮罩。</p>
-<p><img src="../../../_resources/1328ef5109254a81911c8a7d21ae272f.png" alt="317d53adf4916528174095617fb5b1fc.png"></p>
+<p><img src="https://vientostudio.github.io/三渲二完全手册/resources/1328ef5109254a81911c8a7d21ae272f.png" alt="317d53adf4916528174095617fb5b1fc.png"></p>
 <p>创建完之后似乎和原来也没什么区别，别急，如果这是你自建的模型，你首先要去 UV Editing 工作区展开UV，质量用不着太好，直接用智能UV投射就行。</p>
-<p><img src="../../../_resources/585982d8f5684537b22510f5f7c0b926.png" alt="ce64cc156d0d5679dcd0d43e8f6f6c49.png"></p>
+<p><img src="https://vientostudio.github.io/三渲二完全手册/resources/585982d8f5684537b22510f5f7c0b926.png" alt="ce64cc156d0d5679dcd0d43e8f6f6c49.png"></p>
 <p>幸运的是，用于演示的猴头已经有了默认的UV展开，所以我们直接开始画就行。现在来到隔壁的 Texture Paint 工作区。把活动颜色调成黑色，视图着色方式改成渲染。</p>
-<p><img src="../../../_resources/1e28f34f871c41e685c02676b717d2f4.png" alt="c96492e3210d91e80140bc513ba3e9ba.png"></p>
+<p><img src="https://vientostudio.github.io/三渲二完全手册/resources/1e28f34f871c41e685c02676b717d2f4.png" alt="c96492e3210d91e80140bc513ba3e9ba.png"></p>
 <p>准备好了吗？现在该开始画了！（别怕，这不需要任何绘画技巧，单纯的涂色而已。）</p>
 <p>假如你对这个猴头的阴影不满意，你想把它的耳朵纳入阴影之中，很简单，画！</p>
-<p><img src="../../../_resources/95ed376dfdf04c00b6aade6de6c0df6a.png" alt="d6ac6ff845635c5d70e13cb6aad31969.png"></p>
+<p><img src="https://vientostudio.github.io/三渲二完全手册/resources/95ed376dfdf04c00b6aade6de6c0df6a.png" alt="d6ac6ff845635c5d70e13cb6aad31969.png"></p>
 <p>我在猴头的耳朵上随意涂抹了几下，就把它纳入阴影之中了。旁边的贴图上也适时显示出我绘画的痕迹，那假如我现在反悔了，想擦掉一点阴影怎么办呢？当然是换成白色画了！</p>
-<p><img src="../../../_resources/4b33bbe5c06c4584b2ee45f270d405e7.png" alt="80bae3a592d21c8d5eca7ec24af503d4.png"></p>
+<p><img src="https://vientostudio.github.io/三渲二完全手册/resources/4b33bbe5c06c4584b2ee45f270d405e7.png" alt="80bae3a592d21c8d5eca7ec24af503d4.png"></p>
 <p>我又用白色擦掉了一点原来的黑色阴影，不用担心，你的涂画绝对不会影响到原本正常的材质阴影的。</p>
 <p>不管你想在哪里添加阴影，画一笔就行：</p>
-<p><img src="../../../_resources/74d878d194fb4190b19b2aeaf675b762.png" alt="7e01b62acfda13a26e63fe7614f67e76.png"></p>
+<p><img src="https://vientostudio.github.io/三渲二完全手册/resources/74d878d194fb4190b19b2aeaf675b762.png" alt="7e01b62acfda13a26e63fe7614f67e76.png"></p>
 <p>啊，等等，我忘了讲了，这个画出来的阴影边缘是模糊的，这取决于画笔的衰减设置。</p>
-<p><img src="../../../_resources/90d93063acf54fb08e470cfd412aaf93.png" alt="89954a7ce5ec4b38cb460da3d01533cc.png"></p>
+<p><img src="https://vientostudio.github.io/三渲二完全手册/resources/90d93063acf54fb08e470cfd412aaf93.png" alt="89954a7ce5ec4b38cb460da3d01533cc.png"></p>
 <p>就是这个设置，你可以设置成常值，就会有很硬的阴影边缘了</p>
-<p><img src="../../../_resources/11f06a445cf3488a90d92ccf3f9362d7.png" alt="ce3a9108fdc88b41ffc5523ec032f118.png"></p>
+<p><img src="https://vientostudio.github.io/三渲二完全手册/resources/11f06a445cf3488a90d92ccf3f9362d7.png" alt="ce3a9108fdc88b41ffc5523ec032f118.png"></p>
 <p>最简单的阴影遮罩就到此为止了，接下来的反向阴影遮罩用得可能少一些。不再有预设的接口，你要自己搭建阴影计算的节点系统了。</p>
 <p>刚刚我们提到，如果不该暗的地方暗了怎么办？这次要用反向阴影遮罩了！</p>
 <p>先把状态恢复到刚新建阴影遮罩贴图的时候，然后把图片纹理的节点连接断开，把颜色渐变节点直接接到材质输出上：</p>
-<p><img src="../../../_resources/ecc379fca9fe4c96bea4e363e55627b1.png" alt="fd1ea59312dffbb4e44f5d2b48465f52.png"></p>
+<p><img src="https://vientostudio.github.io/三渲二完全手册/resources/ecc379fca9fe4c96bea4e363e55627b1.png" alt="fd1ea59312dffbb4e44f5d2b48465f52.png"></p>
 <p>可以看到，我们输入 Basic 节点组的光照数据，实际上是所有高光区域都为白色(1)，所有阴影区域都为黑色(0)。为了让黑色区域变亮，我们需要让贴图的底色为黑色，然后用最大值节点来运算（我们就直接用刚才的贴图吧，但这次记得把整个图片都涂成黑色）。连接方式如图所示：</p>
-<p><img src="../../../_resources/309ed75b1f1c4aa797d9ccfbcbf04d9c.png" alt="044ca8efedac65d966b91f637c7caee8.png"></p>
+<p><img src="https://vientostudio.github.io/三渲二完全手册/resources/309ed75b1f1c4aa797d9ccfbcbf04d9c.png" alt="044ca8efedac65d966b91f637c7caee8.png"></p>
 <p>（没错，刚才的 Shadow Mask 输入就不用了。其实如果你打开节点组看一看，里面也就是把 Shadow Mask 输入和 Key Light Group 输入求了个最小值。主要是根据我的经验，阴影遮罩比反向阴影遮罩用得更多，所以就直接在 Basic 节点组做了个方便的接口）</p>
 <p>让我们回到刚才的 Texture Paint 工作区，把活动颜色调成白色，开画！</p>
-<p><img src="../../../_resources/755e0283578b4115bf120a386d32d7b8.png" alt="348ffbecbdffdf3c91e72852e571181a.png"></p>
+<p><img src="https://vientostudio.github.io/三渲二完全手册/resources/755e0283578b4115bf120a386d32d7b8.png" alt="348ffbecbdffdf3c91e72852e571181a.png"></p>
 <p>瞧，非常容易的就把背面的阴影区域给涂成高光了。</p>
 <p>现在，你应该已经掌握了阴影遮罩和反向阴影遮罩的基本原理了。如果你同时想用阴影遮罩和反向阴影遮罩，直接建两张贴图分别按阴影遮罩和反向阴影遮罩的方式连接就行了。（当然，这意味着光照数据的计算顺序是先算反向阴影遮罩，再输入 Basic 节点内部计算阴影遮罩）</p>
 <p>接下来是进阶技巧，插值可变的阴影遮罩！</p>
@@ -580,4 +580,3 @@
 </div></div>
 					</body>
 				</html>
-			

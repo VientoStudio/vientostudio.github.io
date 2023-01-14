@@ -45,17 +45,17 @@
 			border: none;
 		}
 		::-webkit-scrollbar-thumb {
-			background: rgba(100, 100, 100, 0.3); 
+			background: rgba(100, 100, 100, 0.3);
 			border-radius: 5px;
 		}
 		::-webkit-scrollbar-track:hover {
-			background: rgba(0, 0, 0, 0.1); 
+			background: rgba(0, 0, 0, 0.1);
 		}
 		::-webkit-scrollbar-thumb:hover {
-			background: rgba(100, 100, 100, 0.7); 
+			background: rgba(100, 100, 100, 0.7);
 		}
 
-		
+
 
 		/* Remove top padding and margin from first child so that top of rendered text is aligned to top of text editor text */
 
@@ -72,7 +72,7 @@
 			margin-top: 0;
 			padding-top: 0;
 		}
-		
+
 		p, h1, h2, h3, h4, h5, h6, ul, table {
 			margin-top: .6em;
 			margin-bottom: 1.35em;
@@ -145,7 +145,7 @@
 			margin-right: 0.4em;
 			background-color:  #155BDA;
 		}
-    /* These icons are obtained from the wonderful ForkAwesome project by copying the src svgs 
+    /* These icons are obtained from the wonderful ForkAwesome project by copying the src svgs
      * into the css classes below.
      * svgs are obtained from https://github.com/ForkAwesome/Fork-Awesome/tree/master/src/icons/svg
      * instead of the svg width, height property you must use a viewbox here, 0 0 1536 1792 is typically the actual size of the icon
@@ -257,7 +257,7 @@
 			max-width: 100%;
 			height: auto;
 		}
-		
+
 		.inline-code,
 		.mce-content-body code {
 			border: 1px solid rgb(220, 220, 220);
@@ -401,7 +401,7 @@
 				height: auto !important;
 			}
 		}
-	
+
 
 				/*
 					FOR THE MARKDOWN EDITOR
@@ -419,7 +419,7 @@
 					margin-left: -1.71em;
 					margin-right: 0.7em;
 				}
-				
+
 				ul.joplin-checklist {
 					list-style:none;
 				}
@@ -454,7 +454,7 @@
 				}
 
 				.fountain .title-page,
-				.fountain .page { 
+				.fountain .page {
 					box-shadow: 0 0 5px rgba(0,0,0,0.1);
 					border: 1px solid #d2d2d2;
 					padding: 10%;
@@ -542,38 +542,38 @@
 <p>奇奇怪怪的灯光设置。</p>
 </blockquote>
 <p>这一章，我们终于要学到<br>
-<img src="../../../_resources/b3f751d477e549af8ddcdc1dbe0cd102.png" alt="a5ac594a10c3bbb9e3bedd7fc634af4a.png"> 和 <img src="../../../_resources/e0745d8584f746e6a0cdc7121eedca1d.png" alt="b62c42f2ae4d9e036d6a5a080aa2e0e4.png"><br>
+<img src="https://vientostudio.github.io/三渲二完全手册/resources/b3f751d477e549af8ddcdc1dbe0cd102.png" alt="a5ac594a10c3bbb9e3bedd7fc634af4a.png"> 和 <img src="https://vientostudio.github.io/三渲二完全手册/resources/e0745d8584f746e6a0cdc7121eedca1d.png" alt="b62c42f2ae4d9e036d6a5a080aa2e0e4.png"><br>
 都是什么意思了。</p>
 <p>首先，来点背景知识普及。这套三渲二材质节点组是在 Blender 2.9 版本的时候开发的（0.1.0版本完成于2021.9.15，卧槽，距离我写这段文字的今天2023.1.7已经一年多了），当时 Blender 想要排除灯光的影响是很困难繁琐的事情。在 PBR 中，这样的需求并不明显，因为基于物理的渲染确实需要全部的灯光信息来使画面尽量真实。然而，在三渲二中，我们希望对物体的高光有着完全的控制，因此我们就不能让不相干的光源在物体上映射出来我们不想要的高光。有什么办法可以让不同的光源分别照出高光，而又互不影响呢？</p>
 <p>答案是有的，<strong>把灯光分成RGB三色，每一种颜色的灯光都属于同一个灯光组，用分离颜色节点来分离三种颜色的光源产生的灯光效果</strong>，这样就可以分别计算三个灯光组的光照效果。这就是 Lighting 节点组的实现原理。</p>
 <p>你可以尝试把 Lighting 节点组的每个输出都直接接到材质输出上来观察效果。（这是材质节点调试的技巧，从前往后挨个把输出直接接到材质输出上，这样就可以清楚的看到每一个节点都做了什么。）首先，我们把 Lighting 节点组的 RGB 输出直接接到材质输出上，然后灯光颜色改成红色来看一下：</p>
-<p><img src="../../../_resources/b3fd045d79854fd5baea8776815fc766.png" alt="c0292420e6c6ec382f3f3230e381e674.png"><br>
-<img src="../../../_resources/1c4f6e877c6a40a0a6f7719cf90f9411.png" alt="976c38eaeaaf4862cb37536ca1d53257.png"></p>
+<p><img src="https://vientostudio.github.io/三渲二完全手册/resources/b3fd045d79854fd5baea8776815fc766.png" alt="c0292420e6c6ec382f3f3230e381e674.png"><br>
+<img src="https://vientostudio.github.io/三渲二完全手册/resources/1c4f6e877c6a40a0a6f7719cf90f9411.png" alt="976c38eaeaaf4862cb37536ca1d53257.png"></p>
 <p>Lighting 节点组的 RGB 输出是最原始的光照信息。你看，实际上灯光照出来的光就是红色的。</p>
 <p>让我们新建一个绿色点光源，能量调到 100W，移动到（-2m, -1m, 2m）的位置。</p>
-<p><img src="../../../_resources/ef94d4a705d74dd39dacd1846151ddab.png" alt="929c6edcf241ca2342c9bf931f27431c.png"></p>
+<p><img src="https://vientostudio.github.io/三渲二完全手册/resources/ef94d4a705d74dd39dacd1846151ddab.png" alt="929c6edcf241ca2342c9bf931f27431c.png"></p>
 <p>瞧，现在绿色灯光与红色灯光交相辉映。如果我们把 Lighting 节点组的R输出直接接到材质输出上呢。</p>
-<p><img src="../../../_resources/d6cb1cbbf79746768b69b198957d275a.png" alt="743117b85efaf8365f56d8a66ef81835.png"></p>
+<p><img src="https://vientostudio.github.io/三渲二完全手册/resources/d6cb1cbbf79746768b69b198957d275a.png" alt="743117b85efaf8365f56d8a66ef81835.png"></p>
 <p>红色灯光组的光照被单独分离出来了，只有灰度因为这反映的实际上是红色的色值，那么这次换成G输出呢？</p>
-<p><img src="../../../_resources/5c12dca795894673b130b00e4e4bb021.png" alt="b00df3c3f2d1ed48583443d8ec36dc88.png"></p>
+<p><img src="https://vientostudio.github.io/三渲二完全手册/resources/5c12dca795894673b130b00e4e4bb021.png" alt="b00df3c3f2d1ed48583443d8ec36dc88.png"></p>
 <p>绿色灯光组的光照也被分离出来了，现在换成蓝色灯光组。</p>
-<p><img src="../../../_resources/2c81de812b2747b9ae0600219259cba0.png" alt="e303496fcf30ba8367f2565c1e1c6f90.png"></p>
+<p><img src="https://vientostudio.github.io/三渲二完全手册/resources/2c81de812b2747b9ae0600219259cba0.png" alt="e303496fcf30ba8367f2565c1e1c6f90.png"></p>
 <p>意料之中，场景中没有蓝色的灯光，因此就没有光照。</p>
 <p>现在你大概也能猜到 RGB (Add) 和 RGB (Max) 输出的含义了，前一个是三个灯光组的灰度值直接相加（没有钳制上限到1，这样你后期也许还能进行一些处理），后一个是三个灯光组的灰度值取最大值。</p>
 <p>（我本来想说你打开节点组内部看看也能看明白，然后意识到我从来不写注释，焯，这个坏习惯真得改）</p>
 <p>接下来我们把 Basic 节点组连回去，分别把R输出和G输出分别接到颜色渐变节点上，我们就可以控制分别使用红色灯光组和绿色灯光组来照亮物体了：</p>
-<p><img src="../../../_resources/f9e42a56a7f441a08c93750d25712f38.png" alt="2d73e7a3a5b0f853d98eb6f8bb5ec21a.png"><br>
-<img src="../../../_resources/444f2268623f466f9396506d400f0123.png" alt="237e4aa3bb4cc2402aade19b883ef844.png"></p>
+<p><img src="https://vientostudio.github.io/三渲二完全手册/resources/f9e42a56a7f441a08c93750d25712f38.png" alt="2d73e7a3a5b0f853d98eb6f8bb5ec21a.png"><br>
+<img src="https://vientostudio.github.io/三渲二完全手册/resources/444f2268623f466f9396506d400f0123.png" alt="237e4aa3bb4cc2402aade19b883ef844.png"></p>
 <p>等等，绿色灯光组有些问题……为啥 Specular 节点组还在使用从红色灯光反射过来的高光？还记得我们上一章跳过了 Specular 节点组的 Key Light Group 输入吗？现在是讲它的时候了。你现在应该明白，这个输入是为了控制 Specular 节点组根据哪个灯光组产生高光了吧。</p>
 <p>让我们把它调成绿色：</p>
-<p><img src="../../../_resources/2b95977c9f4949c09c120e25577a4d06.png" alt="80d442dfe4be38b6659bea9b9043b72f.png"></p>
+<p><img src="https://vientostudio.github.io/三渲二完全手册/resources/2b95977c9f4949c09c120e25577a4d06.png" alt="80d442dfe4be38b6659bea9b9043b72f.png"></p>
 <p>好了，现在高光是正常根据绿色灯光组产生的了。如果你想要同时两个灯光组的高光也行，同时把 Key Light Group 输入颜色的R和G拉满就行！</p>
-<p><img src="../../../_resources/b393d1b1d72d4898b7ea0937101210d6.png" alt="9dd4fd7977c5e21bff3088fea0cb3361.png"></p>
+<p><img src="https://vientostudio.github.io/三渲二完全手册/resources/b393d1b1d72d4898b7ea0937101210d6.png" alt="9dd4fd7977c5e21bff3088fea0cb3361.png"></p>
 <p>是不是很有意思？</p>
 <p>接下来该讲 Basic 节点组的那三个输入了，它们是为边缘光准备的。毕竟在绘画中，只有高光和阴影是不够的，物体的背光面的边缘往往还有边缘光，这些边缘光往往来自环境的反射，因此呈现出环境的颜色。现在，我们可以用红色灯光组作为主灯光组，绿色灯光组作为边缘光灯光组来为猴头着色。新建一个颜色渐变节点，系数来自于 Lighting 节点组的G输出，然后把颜色输出接到 Basic 节点组的 G Light Group Color 输入上：</p>
-<p><img src="../../../_resources/f4224f0d59d1406b8346ac157deb3da8.png" alt="0de68ed8eb06a5c3e837acbda4102501.png"></p>
+<p><img src="https://vientostudio.github.io/三渲二完全手册/resources/f4224f0d59d1406b8346ac157deb3da8.png" alt="0de68ed8eb06a5c3e837acbda4102501.png"></p>
 <p>材质蒙上了一层雾一样的边缘光，我们可以使用在第一章中学到的技巧调整颜色渐变节点，而且这次我们可以给颜色渐变节点上点花哨的颜色：</p>
-<p><img src="../../../_resources/7f980c1eb0ae448aaa8a68e973a71235.png" alt="6162d2b758d3d3d6d6ca0e9e6c50b6c4.png"></p>
+<p><img src="https://vientostudio.github.io/三渲二完全手册/resources/7f980c1eb0ae448aaa8a68e973a71235.png" alt="6162d2b758d3d3d6d6ca0e9e6c50b6c4.png"></p>
 <p>现在这个猴头看起来好像背靠粉红霓虹灯的背景了，在一个赛博朋克场景中这种技巧肯定非常有用（提前预告，假如你觉得这个边缘光太呆了不会动，第七章菲涅尔会讲你想要的东西）。这就是 Basic 节点组这三个输入的用法了。（而且这三个输入是一模一样的，只不过通过不同命名方便灯光组管理。）</p>
 <p>// TODO：讲讲 Lighting 节点组的两种假灯光输出。</p>
 <p>最后，在结束这一章之前，我想讲讲灯光组使用习惯。理所当然的是，我们一般默认使用红色灯光组作为主灯光组，而用绿色和蓝色灯光组做边缘光。通过合理的搭配聚光灯和光照裁剪，场景灯光大部分情况下是可以保证互不干扰的。尽量让场景中的材质都使用相同的主灯光组可以方便材质的互换。当然，总有必须分离光照效果的时候，那就到了使用绿色和蓝色灯光组作为主灯光组的时机了。</p>
@@ -581,4 +581,3 @@
 </div></div>
 					</body>
 				</html>
-			

@@ -45,17 +45,17 @@
 			border: none;
 		}
 		::-webkit-scrollbar-thumb {
-			background: rgba(100, 100, 100, 0.3); 
+			background: rgba(100, 100, 100, 0.3);
 			border-radius: 5px;
 		}
 		::-webkit-scrollbar-track:hover {
-			background: rgba(0, 0, 0, 0.1); 
+			background: rgba(0, 0, 0, 0.1);
 		}
 		::-webkit-scrollbar-thumb:hover {
-			background: rgba(100, 100, 100, 0.7); 
+			background: rgba(100, 100, 100, 0.7);
 		}
 
-		
+
 
 		/* Remove top padding and margin from first child so that top of rendered text is aligned to top of text editor text */
 
@@ -72,7 +72,7 @@
 			margin-top: 0;
 			padding-top: 0;
 		}
-		
+
 		p, h1, h2, h3, h4, h5, h6, ul, table {
 			margin-top: .6em;
 			margin-bottom: 1.35em;
@@ -145,7 +145,7 @@
 			margin-right: 0.4em;
 			background-color:  #155BDA;
 		}
-    /* These icons are obtained from the wonderful ForkAwesome project by copying the src svgs 
+    /* These icons are obtained from the wonderful ForkAwesome project by copying the src svgs
      * into the css classes below.
      * svgs are obtained from https://github.com/ForkAwesome/Fork-Awesome/tree/master/src/icons/svg
      * instead of the svg width, height property you must use a viewbox here, 0 0 1536 1792 is typically the actual size of the icon
@@ -257,7 +257,7 @@
 			max-width: 100%;
 			height: auto;
 		}
-		
+
 		.inline-code,
 		.mce-content-body code {
 			border: 1px solid rgb(220, 220, 220);
@@ -401,7 +401,7 @@
 				height: auto !important;
 			}
 		}
-	
+
 
 				/*
 					FOR THE MARKDOWN EDITOR
@@ -419,7 +419,7 @@
 					margin-left: -1.71em;
 					margin-right: 0.7em;
 				}
-				
+
 				ul.joplin-checklist {
 					list-style:none;
 				}
@@ -454,7 +454,7 @@
 				}
 
 				.fountain .title-page,
-				.fountain .page { 
+				.fountain .page {
 					box-shadow: 0 0 5px rgba(0,0,0,0.1);
 					border: 1px solid #d2d2d2;
 					padding: 10%;
@@ -542,32 +542,31 @@
 <p>啊 ~ ，透明的，亮亮的，嘿嘿嘿 ~</p>
 </blockquote>
 <p>首先，在使用Alpha之前，你需要确保调整材质设置里的混合模式至 Alpha 混合。</p>
-<p><img src="../../../_resources/c2674c3c06b54d7e8814ecc1a6ad1ca1.png" alt="cb8f7f1b34d4af86be3d56d99f95a56d.png"></p>
+<p><img src="https://vientostudio.github.io/三渲二完全手册/resources/c2674c3c06b54d7e8814ecc1a6ad1ca1.png" alt="cb8f7f1b34d4af86be3d56d99f95a56d.png"></p>
 <p>回头看一眼……卧槽，为啥猴头变成这样了。</p>
-<p><img src="../../../_resources/25846071ad58422f838b9b99264d9f73.png" alt="95044d3d905ff24267e85eced10ffd31.png"></p>
+<p><img src="https://vientostudio.github.io/三渲二完全手册/resources/25846071ad58422f838b9b99264d9f73.png" alt="95044d3d905ff24267e85eced10ffd31.png"></p>
 <p>啊，这是因为猴头背面的阴影部分的材质混合过来了，如果我们把显示背面关闭：</p>
-<p><img src="../../../_resources/df5a29f4c2d646c394d2e2e87b2e2a6e.png" alt="bc96e52595a8d318c70554f727477f66.png"></p>
+<p><img src="https://vientostudio.github.io/三渲二完全手册/resources/df5a29f4c2d646c394d2e2e87b2e2a6e.png" alt="bc96e52595a8d318c70554f727477f66.png"></p>
 <p>瞧，你会发现猴头正面还是一如既往。</p>
-<p><img src="../../../_resources/000be4f3e66941909187248e6fcebb84.png" alt="6109ad3b9ea78af091ef694f971356fd.png"></p>
+<p><img src="https://vientostudio.github.io/三渲二完全手册/resources/000be4f3e66941909187248e6fcebb84.png" alt="6109ad3b9ea78af091ef694f971356fd.png"></p>
 <p>你可能会想知道这里背面剔除和显示背面设置有什么区别，那么这是仅打开背面剔除而未关闭显示背面设置时候的样子：</p>
-<p><img src="../../../_resources/38146ad797864bd9b3e9e4691ff085dd.png" alt="40bd7c7955c189533f9b61b88dd8466f.png"></p>
+<p><img src="https://vientostudio.github.io/三渲二完全手册/resources/38146ad797864bd9b3e9e4691ff085dd.png" alt="40bd7c7955c189533f9b61b88dd8466f.png"></p>
 <p>注意此时猴头远处耳朵的正面也透过正面显示出来了。</p>
 <p>接下来回归正题，只要把 Basic 节点组的 Alpha 输入调低，就可以看到猴头逐渐变成半透明了：</p>
-<p><img src="../../../_resources/6c6d6f12edcb40fb8eaa9360e9297b63.png" alt="5568d4bb29ac13fd3c3d1e55ac359041.png"></p>
+<p><img src="https://vientostudio.github.io/三渲二完全手册/resources/6c6d6f12edcb40fb8eaa9360e9297b63.png" alt="5568d4bb29ac13fd3c3d1e55ac359041.png"></p>
 <p>（为啥突然感觉把这些东西详细讲讲有点水？感觉没啥难度，你们自己鼓捣一下那些设置也能懂。算了，这是个从零开始的教程还是要详细讲。）</p>
 <p>然后是自发光，这个很简单，默认为 1.0 是没有自发光，越高越亮：</p>
-<p><img src="../../../_resources/8523d4a21fb141deb7aec124e303b6ab.png" alt="e9e2ea52d33f313c7f3ca3cf0a6d7883.png"><br>
-<img src="../../../_resources/7ed039bb74954194a183dd8d793ac18d.png" alt="bc9ae3fd3166fb106936d9f9bd76313f.png"></p>
+<p><img src="https://vientostudio.github.io/三渲二完全手册/resources/8523d4a21fb141deb7aec124e303b6ab.png" alt="e9e2ea52d33f313c7f3ca3cf0a6d7883.png"><br>
+<img src="https://vientostudio.github.io/三渲二完全手册/resources/7ed039bb74954194a183dd8d793ac18d.png" alt="bc9ae3fd3166fb106936d9f9bd76313f.png"></p>
 <p>（亮过头都发白了。）</p>
 <p>相反，调成0的自发光，整个材质就黑了：</p>
-<p><img src="../../../_resources/72f72e4db10c40f9a667844104c18dee.png" alt="5a78ff410a3532298bcd325760607a9d.png"></p>
+<p><img src="https://vientostudio.github.io/三渲二完全手册/resources/72f72e4db10c40f9a667844104c18dee.png" alt="5a78ff410a3532298bcd325760607a9d.png"></p>
 <p>（这章内容真的好简单。）</p>
 <p>接下来玩点大的，把几何数据节点里的位置输出直接接到 Alpha 和自发光设置上。（带点简单运算）</p>
-<p><img src="../../../_resources/f4908a80d492444cacfae0457e84871f.png" alt="e895268e6f4f08cf39a963dad000ba99.png"></p>
+<p><img src="https://vientostudio.github.io/三渲二完全手册/resources/f4908a80d492444cacfae0457e84871f.png" alt="e895268e6f4f08cf39a963dad000ba99.png"></p>
 <p>诡异的发光幽灵猴头逐渐浮现，噫 ~（你可以给这些输入都k上动画，就能做出来逐渐浮现的效果了，简单好用）</p>
 <p>// TODO：详细写写不同的透明模式设置和背后原理。</p>
 <p>上一章：<a data-from-md title='https://vientostudio.github.io/%E4%B8%89%E6%B8%B2%E4%BA%8C%E5%AE%8C%E5%85%A8%E6%89%8B%E5%86%8C/%E6%9D%90%E8%B4%A8%E5%92%8C%E5%85%89%E7%85%A7/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E6%9E%97%E5%AE%9D%E4%B8%89%E6%B8%B2%E4%BA%8C%E6%9D%90%E8%B4%A8%E6%95%99%E7%A8%8B/%E7%AC%AC%E4%BA%94%E7%AB%A0%20%E9%98%B4%E5%BD%B1%E8%BF%9B%E9%98%B6.html' href='https://vientostudio.github.io/%E4%B8%89%E6%B8%B2%E4%BA%8C%E5%AE%8C%E5%85%A8%E6%89%8B%E5%86%8C/%E6%9D%90%E8%B4%A8%E5%92%8C%E5%85%89%E7%85%A7/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E6%9E%97%E5%AE%9D%E4%B8%89%E6%B8%B2%E4%BA%8C%E6%9D%90%E8%B4%A8%E6%95%99%E7%A8%8B/%E7%AC%AC%E4%BA%94%E7%AB%A0%20%E9%98%B4%E5%BD%B1%E8%BF%9B%E9%98%B6.html'>第五章 阴影进阶</a>　<a data-from-md title='https://vientostudio.github.io/%E4%B8%89%E6%B8%B2%E4%BA%8C%E5%AE%8C%E5%85%A8%E6%89%8B%E5%86%8C/%E7%9B%AE%E5%BD%95.html' href='https://vientostudio.github.io/%E4%B8%89%E6%B8%B2%E4%BA%8C%E5%AE%8C%E5%85%A8%E6%89%8B%E5%86%8C/%E7%9B%AE%E5%BD%95.html'>目录</a>　下一章：<a data-from-md title='https://vientostudio.github.io/%E4%B8%89%E6%B8%B2%E4%BA%8C%E5%AE%8C%E5%85%A8%E6%89%8B%E5%86%8C/%E6%9D%90%E8%B4%A8%E5%92%8C%E5%85%89%E7%85%A7/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E6%9E%97%E5%AE%9D%E4%B8%89%E6%B8%B2%E4%BA%8C%E6%9D%90%E8%B4%A8%E6%95%99%E7%A8%8B/%E7%AC%AC%E4%B8%83%E7%AB%A0%20%E8%8F%B2%E6%B6%85%E5%B0%94%EF%BC%88%E4%BB%A5%E5%8F%8A%E4%B8%80%E4%B8%AA%E8%BF%9B%E9%98%B6%E7%94%A8%E6%B3%95%EF%BC%89.html' href='https://vientostudio.github.io/%E4%B8%89%E6%B8%B2%E4%BA%8C%E5%AE%8C%E5%85%A8%E6%89%8B%E5%86%8C/%E6%9D%90%E8%B4%A8%E5%92%8C%E5%85%89%E7%85%A7/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E6%9E%97%E5%AE%9D%E4%B8%89%E6%B8%B2%E4%BA%8C%E6%9D%90%E8%B4%A8%E6%95%99%E7%A8%8B/%E7%AC%AC%E4%B8%83%E7%AB%A0%20%E8%8F%B2%E6%B6%85%E5%B0%94%EF%BC%88%E4%BB%A5%E5%8F%8A%E4%B8%80%E4%B8%AA%E8%BF%9B%E9%98%B6%E7%94%A8%E6%B3%95%EF%BC%89.html'>第七章 菲涅尔（以及一个进阶用法）</a></p>
 </div></div>
 					</body>
 				</html>
-			

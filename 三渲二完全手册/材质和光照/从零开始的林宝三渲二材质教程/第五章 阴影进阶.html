@@ -45,17 +45,17 @@
 			border: none;
 		}
 		::-webkit-scrollbar-thumb {
-			background: rgba(100, 100, 100, 0.3); 
+			background: rgba(100, 100, 100, 0.3);
 			border-radius: 5px;
 		}
 		::-webkit-scrollbar-track:hover {
-			background: rgba(0, 0, 0, 0.1); 
+			background: rgba(0, 0, 0, 0.1);
 		}
 		::-webkit-scrollbar-thumb:hover {
-			background: rgba(100, 100, 100, 0.7); 
+			background: rgba(100, 100, 100, 0.7);
 		}
 
-		
+
 
 		/* Remove top padding and margin from first child so that top of rendered text is aligned to top of text editor text */
 
@@ -72,7 +72,7 @@
 			margin-top: 0;
 			padding-top: 0;
 		}
-		
+
 		p, h1, h2, h3, h4, h5, h6, ul, table {
 			margin-top: .6em;
 			margin-bottom: 1.35em;
@@ -145,7 +145,7 @@
 			margin-right: 0.4em;
 			background-color:  #155BDA;
 		}
-    /* These icons are obtained from the wonderful ForkAwesome project by copying the src svgs 
+    /* These icons are obtained from the wonderful ForkAwesome project by copying the src svgs
      * into the css classes below.
      * svgs are obtained from https://github.com/ForkAwesome/Fork-Awesome/tree/master/src/icons/svg
      * instead of the svg width, height property you must use a viewbox here, 0 0 1536 1792 is typically the actual size of the icon
@@ -257,7 +257,7 @@
 			max-width: 100%;
 			height: auto;
 		}
-		
+
 		.inline-code,
 		.mce-content-body code {
 			border: 1px solid rgb(220, 220, 220);
@@ -401,7 +401,7 @@
 				height: auto !important;
 			}
 		}
-	
+
 
 				/*
 					FOR THE MARKDOWN EDITOR
@@ -419,7 +419,7 @@
 					margin-left: -1.71em;
 					margin-right: 0.7em;
 				}
-				
+
 				ul.joplin-checklist {
 					list-style:none;
 				}
@@ -454,7 +454,7 @@
 				}
 
 				.fountain .title-page,
-				.fountain .page { 
+				.fountain .page {
 					box-shadow: 0 0 5px rgba(0,0,0,0.1);
 					border: 1px solid #d2d2d2;
 					padding: 10%;
@@ -542,21 +542,20 @@
 <p>没错，虽然叫进阶但其实这一章都是在抠细节。</p>
 </blockquote>
 <p>在第一章中，我们提到了如何用颜色渐变方便快捷的控制多层阴影边缘渐变。然而，这个控制选项并没有它表面上看上去那么简单。你可以尝试随意改变阴影颜色的灰度，看看会发生什么？</p>
-<p><img src="../../../_resources/c709bea710e149869cd8c21e6f679c51.png" alt="d07a66784fd9c2a4d5c8f18ac0058597.png"></p>
+<p><img src="https://vientostudio.github.io/三渲二完全手册/resources/c709bea710e149869cd8c21e6f679c51.png" alt="d07a66784fd9c2a4d5c8f18ac0058597.png"></p>
 <p>当你把阴影颜色调亮到一定程度的时候，你会发现，最暗的那层阴影消失了，取而代之的是中间层的较亮一些的阴影。实际上，如果你分足够多层，你可以观察到当你把阴影颜色调亮时，这些阴影层从暗到亮的融合在一起。这是因为 Basic 节点组内部是使用变亮节点来进行阴影混合的，如果你尝试给阴影上不同的色彩，你会发现也只有最暗的那一层会受影响。不过没有问题，因为一般来说，我们不会给阴影颜色输入上色彩。（心虚）</p>
 <p>如果你想知道为啥这里没改：这算是很久很久之前遗留下来的特性（第一个 0.1.0 版本就有了），当时我没考虑要上多层阴影渐变就直接用上变亮节点了。对于单阴影来说，这还是很好用的。然后这个问题在 0.4.4 才被我重视起来。这个特性没被修改的唯一原因是因为之前离开了一段时间，0.4.4 以后版本的三渲二材质节点版本控制十分混乱，包括实际上是 0.4.5 版本的修改版本和其他的一些分支版本都混杂在一起，通用着 0.4.4 的版本号，我希望所有 0.4.4 版本的三渲二材质节点基本上能差不多混用，所以就先不修改一个如此基础的特性了。（留到 0.5.0 版本号再大改，挤牙膏更新了属于是）</p>
 <p>如果你想要理想中的多层阴影调整，那你就得打个补丁：</p>
-<p><img src="../../../_resources/44ee00d1a77b4562aac8a1cf3c3e8a34.png" alt="57b2c34aee26a2f3c2382eb6b4f69f69.png"></p>
+<p><img src="https://vientostudio.github.io/三渲二完全手册/resources/44ee00d1a77b4562aac8a1cf3c3e8a34.png" alt="57b2c34aee26a2f3c2382eb6b4f69f69.png"></p>
 <p>把 Basic 节点组的阴影输入调成纯黑（相当于关闭它对光照数据的影响）。然后把节点连接成如图所示的样子，用那个RGB节点当成阴影颜色输入。</p>
 <p>而如果你真的需要完全控制阴影每一层的颜色的话，你应该直接把颜色渐变节点上个颜色当基础色用：</p>
-<p><img src="../../../_resources/09cec0fab52e426f9574fa6e9fdb98a2.png" alt="85696b3f86bd54970f2b598a386ab949.png"></p>
+<p><img src="https://vientostudio.github.io/三渲二完全手册/resources/09cec0fab52e426f9574fa6e9fdb98a2.png" alt="85696b3f86bd54970f2b598a386ab949.png"></p>
 <p>这是最直接的控制方式了，你想控制哪一层的颜色都行。（这时候阴影色彩输入就不用管了，因为相当于 Basic 节点组没有接收到任何光照信息，所以也不会根据阴影颜色添加阴影。）</p>
 <p>另外还有一些使用小技巧，假如你想同时控制多个材质的阴影边缘怎么办呢：</p>
-<p><img src="../../../_resources/82e7122d15c04dcc976cfc30490d8483.png" alt="a2dbad1a4ecd69e31a46aeca670ad4e1.png"><br>
-<img src="../../../_resources/dac76c4f569f4995800c948905daadc6.png" alt="02f0fca92206620a5440266c3a80d54e.png"></p>
+<p><img src="https://vientostudio.github.io/三渲二完全手册/resources/82e7122d15c04dcc976cfc30490d8483.png" alt="a2dbad1a4ecd69e31a46aeca670ad4e1.png"><br>
+<img src="https://vientostudio.github.io/三渲二完全手册/resources/dac76c4f569f4995800c948905daadc6.png" alt="02f0fca92206620a5440266c3a80d54e.png"></p>
 <p>反手就把颜色渐变节点封装进一个节点组里，然后为你想控制的材质都使用这个节点组作为颜色渐变，直接在你封装的节点组里统一控制颜色渐变。（别忘了给节点组起一个有意义的名字）</p>
 <p>上一章：<a data-from-md title='https://vientostudio.github.io/%E4%B8%89%E6%B8%B2%E4%BA%8C%E5%AE%8C%E5%85%A8%E6%89%8B%E5%86%8C/%E6%9D%90%E8%B4%A8%E5%92%8C%E5%85%89%E7%85%A7/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E6%9E%97%E5%AE%9D%E4%B8%89%E6%B8%B2%E4%BA%8C%E6%9D%90%E8%B4%A8%E6%95%99%E7%A8%8B/%E7%AC%AC%E5%9B%9B%E7%AB%A0%20%E9%98%B4%E5%BD%B1%E9%81%AE%E7%BD%A9.html' href='https://vientostudio.github.io/%E4%B8%89%E6%B8%B2%E4%BA%8C%E5%AE%8C%E5%85%A8%E6%89%8B%E5%86%8C/%E6%9D%90%E8%B4%A8%E5%92%8C%E5%85%89%E7%85%A7/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E6%9E%97%E5%AE%9D%E4%B8%89%E6%B8%B2%E4%BA%8C%E6%9D%90%E8%B4%A8%E6%95%99%E7%A8%8B/%E7%AC%AC%E5%9B%9B%E7%AB%A0%20%E9%98%B4%E5%BD%B1%E9%81%AE%E7%BD%A9.html'>第四章 阴影遮罩</a>　<a data-from-md title='https://vientostudio.github.io/%E4%B8%89%E6%B8%B2%E4%BA%8C%E5%AE%8C%E5%85%A8%E6%89%8B%E5%86%8C/%E7%9B%AE%E5%BD%95.html' href='https://vientostudio.github.io/%E4%B8%89%E6%B8%B2%E4%BA%8C%E5%AE%8C%E5%85%A8%E6%89%8B%E5%86%8C/%E7%9B%AE%E5%BD%95.html'>目录</a>　下一章：<a data-from-md title='https://vientostudio.github.io/%E4%B8%89%E6%B8%B2%E4%BA%8C%E5%AE%8C%E5%85%A8%E6%89%8B%E5%86%8C/%E6%9D%90%E8%B4%A8%E5%92%8C%E5%85%89%E7%85%A7/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E6%9E%97%E5%AE%9D%E4%B8%89%E6%B8%B2%E4%BA%8C%E6%9D%90%E8%B4%A8%E6%95%99%E7%A8%8B/%E7%AC%AC%E5%85%AD%E7%AB%A0%20Alpha%20%E4%B8%8E%E8%87%AA%E5%8F%91%E5%85%89.html' href='https://vientostudio.github.io/%E4%B8%89%E6%B8%B2%E4%BA%8C%E5%AE%8C%E5%85%A8%E6%89%8B%E5%86%8C/%E6%9D%90%E8%B4%A8%E5%92%8C%E5%85%89%E7%85%A7/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E6%9E%97%E5%AE%9D%E4%B8%89%E6%B8%B2%E4%BA%8C%E6%9D%90%E8%B4%A8%E6%95%99%E7%A8%8B/%E7%AC%AC%E5%85%AD%E7%AB%A0%20Alpha%20%E4%B8%8E%E8%87%AA%E5%8F%91%E5%85%89.html'>第六章 Alpha 与自发光</a></p>
 </div></div>
 					</body>
 				</html>
-			

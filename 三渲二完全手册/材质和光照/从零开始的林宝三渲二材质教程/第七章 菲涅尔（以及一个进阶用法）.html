@@ -45,17 +45,17 @@
 			border: none;
 		}
 		::-webkit-scrollbar-thumb {
-			background: rgba(100, 100, 100, 0.3); 
+			background: rgba(100, 100, 100, 0.3);
 			border-radius: 5px;
 		}
 		::-webkit-scrollbar-track:hover {
-			background: rgba(0, 0, 0, 0.1); 
+			background: rgba(0, 0, 0, 0.1);
 		}
 		::-webkit-scrollbar-thumb:hover {
-			background: rgba(100, 100, 100, 0.7); 
+			background: rgba(100, 100, 100, 0.7);
 		}
 
-		
+
 
 		/* Remove top padding and margin from first child so that top of rendered text is aligned to top of text editor text */
 
@@ -72,7 +72,7 @@
 			margin-top: 0;
 			padding-top: 0;
 		}
-		
+
 		p, h1, h2, h3, h4, h5, h6, ul, table {
 			margin-top: .6em;
 			margin-bottom: 1.35em;
@@ -145,7 +145,7 @@
 			margin-right: 0.4em;
 			background-color:  #155BDA;
 		}
-    /* These icons are obtained from the wonderful ForkAwesome project by copying the src svgs 
+    /* These icons are obtained from the wonderful ForkAwesome project by copying the src svgs
      * into the css classes below.
      * svgs are obtained from https://github.com/ForkAwesome/Fork-Awesome/tree/master/src/icons/svg
      * instead of the svg width, height property you must use a viewbox here, 0 0 1536 1792 is typically the actual size of the icon
@@ -257,7 +257,7 @@
 			max-width: 100%;
 			height: auto;
 		}
-		
+
 		.inline-code,
 		.mce-content-body code {
 			border: 1px solid rgb(220, 220, 220);
@@ -401,7 +401,7 @@
 				height: auto !important;
 			}
 		}
-	
+
 
 				/*
 					FOR THE MARKDOWN EDITOR
@@ -419,7 +419,7 @@
 					margin-left: -1.71em;
 					margin-right: 0.7em;
 				}
-				
+
 				ul.joplin-checklist {
 					list-style:none;
 				}
@@ -454,7 +454,7 @@
 				}
 
 				.fountain .title-page,
-				.fountain .page { 
+				.fountain .page {
 					box-shadow: 0 0 5px rgba(0,0,0,0.1);
 					border: 1px solid #d2d2d2;
 					padding: 10%;
@@ -542,17 +542,16 @@
 <p>还有一个关于为什么多此一举的解答！</p>
 </blockquote>
 <p>让我们为我们的猴头新建一个 Fresnel 节点，然后把他的颜色输出接到 Basic 节点组的基础色上：</p>
-<p><img src="../../../_resources/3853a297a26a4331adcf00e30c984476.png" alt="1897782432dcb02ca74811f3d99f779e.png"></p>
+<p><img src="https://vientostudio.github.io/三渲二完全手册/resources/3853a297a26a4331adcf00e30c984476.png" alt="1897782432dcb02ca74811f3d99f779e.png"></p>
 <p>简洁易懂，就是把原生的菲涅尔的节点给包装了一遍。</p>
 <p>可能有人要说了（实际上已经有人说过了）：这不是多此一举吗？诶，你要这么想格局就小了。你看这不包装了一下，就提供了方便快捷的菲涅尔染色功能了吗。</p>
 <p>好吧，严肃的回答这个问题的话，这套材质节点组的设计原则是让用户尽量少自己组合节点解决问题。菲涅尔染色功能毫无疑问是非常常用的，假如让用户自己组合颜色运算节点来染色，我很心疼啊（好像这样的回答也不怎么严肃）。本着这样的原则，我也把所有的向量映射节点都封装进节点组里了，所有节点几乎人手三个向量映射的输入。（所以后面等你看到了同样是封装了原本的 UV 贴图节点的 UV 节点组，你就会明白为啥多此一举了）</p>
 <p>接下来是章节标题中就预告过了的，超级有用的进阶用法——可移动的菲涅尔边缘高光！让我们回到第三章中的内容，那个边缘光看起来实在是有点呆，所以为了让边缘光也能跟着视角动起来，让我们创建一个如图所示的节点系统，记得把菲涅尔节点的基础色改为黑色，菲涅尔颜色改为白色，最后直接把颜色渐变的输出接到材质输出节点上：</p>
-<p><img src="../../../_resources/24e762ff77ad4c43a2c0e00bbaa06a44.png" alt="4e8c99e372396eb9b905757bb9292dfd.png"></p>
+<p><img src="https://vientostudio.github.io/三渲二完全手册/resources/24e762ff77ad4c43a2c0e00bbaa06a44.png" alt="4e8c99e372396eb9b905757bb9292dfd.png"></p>
 <p>瞧，我们已经把菲涅尔边缘区域提取出来了，但显然高光只能出现有边缘光灯光组光照的区域，所以让我们运用在第三章中学到的灯光区域运算知识，把高光区域限制住。因为我们只要白色区域的交集，显然使用最小值节点：</p>
-<p><img src="../../../_resources/a3e3828a016a4e9e973fe6dd34494942.png" alt="e29755cc8dd1afa37789d7dae16789cd.png"></p>
+<p><img src="https://vientostudio.github.io/三渲二完全手册/resources/a3e3828a016a4e9e973fe6dd34494942.png" alt="e29755cc8dd1afa37789d7dae16789cd.png"></p>
 <p>现在移动视角，边缘光永远都只会位于边缘了，这个技巧超 有 用！当你尝试给可动的角色模型上边缘光时，绝对绕不开它。</p>
 <p>上一章：<a data-from-md title='https://vientostudio.github.io/%E4%B8%89%E6%B8%B2%E4%BA%8C%E5%AE%8C%E5%85%A8%E6%89%8B%E5%86%8C/%E6%9D%90%E8%B4%A8%E5%92%8C%E5%85%89%E7%85%A7/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E6%9E%97%E5%AE%9D%E4%B8%89%E6%B8%B2%E4%BA%8C%E6%9D%90%E8%B4%A8%E6%95%99%E7%A8%8B/%E7%AC%AC%E5%85%AD%E7%AB%A0%20Alpha%20%E4%B8%8E%E8%87%AA%E5%8F%91%E5%85%89.html' href='https://vientostudio.github.io/%E4%B8%89%E6%B8%B2%E4%BA%8C%E5%AE%8C%E5%85%A8%E6%89%8B%E5%86%8C/%E6%9D%90%E8%B4%A8%E5%92%8C%E5%85%89%E7%85%A7/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E6%9E%97%E5%AE%9D%E4%B8%89%E6%B8%B2%E4%BA%8C%E6%9D%90%E8%B4%A8%E6%95%99%E7%A8%8B/%E7%AC%AC%E5%85%AD%E7%AB%A0%20Alpha%20%E4%B8%8E%E8%87%AA%E5%8F%91%E5%85%89.html'>第六章 Alpha 与自发光</a>　<a data-from-md title='https://vientostudio.github.io/%E4%B8%89%E6%B8%B2%E4%BA%8C%E5%AE%8C%E5%85%A8%E6%89%8B%E5%86%8C/%E7%9B%AE%E5%BD%95.html' href='https://vientostudio.github.io/%E4%B8%89%E6%B8%B2%E4%BA%8C%E5%AE%8C%E5%85%A8%E6%89%8B%E5%86%8C/%E7%9B%AE%E5%BD%95.html'>目录</a>　下一章：<a data-from-md title='https://vientostudio.github.io/%E4%B8%89%E6%B8%B2%E4%BA%8C%E5%AE%8C%E5%85%A8%E6%89%8B%E5%86%8C/%E6%9D%90%E8%B4%A8%E5%92%8C%E5%85%89%E7%85%A7/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E6%9E%97%E5%AE%9D%E4%B8%89%E6%B8%B2%E4%BA%8C%E6%9D%90%E8%B4%A8%E6%95%99%E7%A8%8B/%E7%AC%AC%E5%85%AB%E7%AB%A0%20%E6%89%80%E6%9C%89%E8%B4%9F%E8%B4%A3%E7%BB%99%E7%BA%B9%E7%90%86%E8%8A%82%E7%82%B9%E6%8F%90%E4%BE%9B%E5%90%91%E9%87%8F%E8%BE%93%E5%85%A5%E7%9A%84%E8%8A%82%E7%82%B9%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B.html' href='https://vientostudio.github.io/%E4%B8%89%E6%B8%B2%E4%BA%8C%E5%AE%8C%E5%85%A8%E6%89%8B%E5%86%8C/%E6%9D%90%E8%B4%A8%E5%92%8C%E5%85%89%E7%85%A7/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E6%9E%97%E5%AE%9D%E4%B8%89%E6%B8%B2%E4%BA%8C%E6%9D%90%E8%B4%A8%E6%95%99%E7%A8%8B/%E7%AC%AC%E5%85%AB%E7%AB%A0%20%E6%89%80%E6%9C%89%E8%B4%9F%E8%B4%A3%E7%BB%99%E7%BA%B9%E7%90%86%E8%8A%82%E7%82%B9%E6%8F%90%E4%BE%9B%E5%90%91%E9%87%8F%E8%BE%93%E5%85%A5%E7%9A%84%E8%8A%82%E7%82%B9%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B.html'>第八章 所有负责给纹理节点提供向量输入的节点的那些事</a></p>
 </div></div>
 					</body>
 				</html>
-			
