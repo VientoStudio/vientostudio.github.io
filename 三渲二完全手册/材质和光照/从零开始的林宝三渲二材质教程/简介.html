@@ -537,8 +537,67 @@
 				.fountain .dialogue h4 {
 					text-align: center;
 				}
-.mermaid { background-color: white; width: 640px; }</style><div id="rendered-md"><nav class="table-of-contents"></nav><p>上一章：<a data-from-md title='https://vientostudio.github.io/%E4%B8%89%E6%B8%B2%E4%BA%8C%E5%AE%8C%E5%85%A8%E6%89%8B%E5%86%8C/%E6%9D%90%E8%B4%A8%E5%92%8C%E5%85%89%E7%85%A7/%E7%AE%80%E4%BB%8B.html' href='https://vientostudio.github.io/%E4%B8%89%E6%B8%B2%E4%BA%8C%E5%AE%8C%E5%85%A8%E6%89%8B%E5%86%8C/%E6%9D%90%E8%B4%A8%E5%92%8C%E5%85%89%E7%85%A7/%E7%AE%80%E4%BB%8B.html'>材质和光照/简介</a>　<a data-from-md title='https://vientostudio.github.io/%E4%B8%89%E6%B8%B2%E4%BA%8C%E5%AE%8C%E5%85%A8%E6%89%8B%E5%86%8C/%E7%9B%AE%E5%BD%95.html' href='https://vientostudio.github.io/%E4%B8%89%E6%B8%B2%E4%BA%8C%E5%AE%8C%E5%85%A8%E6%89%8B%E5%86%8C/%E7%9B%AE%E5%BD%95.html'>目录</a>　下一章：<a data-from-md title='https://vientostudio.github.io/%E4%B8%89%E6%B8%B2%E4%BA%8C%E5%AE%8C%E5%85%A8%E6%89%8B%E5%86%8C/%E6%9D%90%E8%B4%A8%E5%92%8C%E5%85%89%E7%85%A7/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E6%9E%97%E5%AE%9D%E4%B8%89%E6%B8%B2%E4%BA%8C%E6%9D%90%E8%B4%A8%E6%95%99%E7%A8%8B/%E7%AC%AC%E9%9B%B6%E7%AB%A0%20%E7%9C%9F%E7%9A%84%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%EF%BC%88%E5%BB%BA%E8%AE%AE%E8%B7%B3%E5%88%B0%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%89.html' href='https://vientostudio.github.io/%E4%B8%89%E6%B8%B2%E4%BA%8C%E5%AE%8C%E5%85%A8%E6%89%8B%E5%86%8C/%E6%9D%90%E8%B4%A8%E5%92%8C%E5%85%89%E7%85%A7/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E6%9E%97%E5%AE%9D%E4%B8%89%E6%B8%B2%E4%BA%8C%E6%9D%90%E8%B4%A8%E6%95%99%E7%A8%8B/%E7%AC%AC%E9%9B%B6%E7%AB%A0%20%E7%9C%9F%E7%9A%84%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%EF%BC%88%E5%BB%BA%E8%AE%AE%E8%B7%B3%E5%88%B0%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%89.html'>第零章 真的从零开始（建议跳到第一章）</a></p>
-<p>在这个教程中，我将假定你<strong>啥都不会</strong>（当然要会用 Blender），从零开始讲解如何使用三渲二材质节点组，来快速方便的搭建三渲二材质。我将使用适用于 Blender 3.3 LTS 的 0.4.4 版本三渲二材质节点组，文件CartoonShader-0.4.4-3.3LTS.blend文件发在工作室内群了。</p>
+.mermaid { background-color: white; width: 640px; }
+/* For styling the rendered Markdown */
+nav.table-of-contents ul {
+    list-style-type: none;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+nav.table-of-contents>ul {
+
+    top: 5px;
+    right: 0px;
+    z-index: 99;
+
+    font-size: 12px;
+    position: fixed;
+    padding: 15px;
+
+    border-radius: 10px 0px 0px 10px;
+    margin: 0px;
+
+    overflow: hidden;
+    height: 90%;
+    width: 5px;
+    transition: .2s;
+}
+nav.table-of-contents::after {
+    /* content: "[目录 - 请将你的鼠标移至程序的右边]"; */
+    color: black;
+}
+
+nav.table-of-contents>ul:hover {
+    background: #F8F8F8;
+    box-shadow: -5px 0px 10px 0px rgba(0,0,0,0.15);
+
+    width: 30%;
+    color: none;
+    overflow: scroll;
+}
+
+nav.table-of-contents>ul:hover::before {
+    content: "目录"
+}
+
+nav.table-of-contents>ul:hover li {
+    display: list-item;
+}
+
+nav.table-of-contents li {
+    display: none;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+    #rendered-md {
+    width: 100%;
+}</style><div id="rendered-md"><nav class="table-of-contents"></nav><p>上一章：<a data-from-md title='https://vientostudio.github.io/%E4%B8%89%E6%B8%B2%E4%BA%8C%E5%AE%8C%E5%85%A8%E6%89%8B%E5%86%8C/%E6%9D%90%E8%B4%A8%E5%92%8C%E5%85%89%E7%85%A7/%E7%AE%80%E4%BB%8B.html' href='https://vientostudio.github.io/%E4%B8%89%E6%B8%B2%E4%BA%8C%E5%AE%8C%E5%85%A8%E6%89%8B%E5%86%8C/%E6%9D%90%E8%B4%A8%E5%92%8C%E5%85%89%E7%85%A7/%E7%AE%80%E4%BB%8B.html'>材质和光照/简介</a>　<a data-from-md title='https://vientostudio.github.io/%E4%B8%89%E6%B8%B2%E4%BA%8C%E5%AE%8C%E5%85%A8%E6%89%8B%E5%86%8C/%E7%9B%AE%E5%BD%95.html' href='https://vientostudio.github.io/%E4%B8%89%E6%B8%B2%E4%BA%8C%E5%AE%8C%E5%85%A8%E6%89%8B%E5%86%8C/%E7%9B%AE%E5%BD%95.html'>目录</a>　下一章：<a data-from-md title='https://vientostudio.github.io/%E4%B8%89%E6%B8%B2%E4%BA%8C%E5%AE%8C%E5%85%A8%E6%89%8B%E5%86%8C/%E6%9D%90%E8%B4%A8%E5%92%8C%E5%85%89%E7%85%A7/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E6%9E%97%E5%AE%9D%E4%B8%89%E6%B8%B2%E4%BA%8C%E6%9D%90%E8%B4%A8%E6%95%99%E7%A8%8B/%E7%AC%AC%E9%9B%B6%E7%AB%A0%20%E7%9C%9F%E7%9A%84%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%EF%BC%88%E5%BB%BA%E8%AE%AE%E8%B7%B3%E5%88%B0%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%89.html' href='https://vientostudio.github.io/%E4%B8%89%E6%B8%B2%E4%BA%8C%E5%AE%8C%E5%85%A8%E6%89%8B%E5%86%8C/%E6%9D%90%E8%B4%A8%E5%92%8C%E5%85%89%E7%85%A7/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E6%9E%97%E5%AE%9D%E4%B8%89%E6%B8%B2%E4%BA%8C%E6%9D%90%E8%B4%A8%E6%95%99%E7%A8%8B/%E7%AC%AC%E9%9B%B6%E7%AB%A0%20%E7%9C%9F%E7%9A%84%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%EF%BC%88%E5%BB%BA%E8%AE%AE%E8%B7%B3%E5%88%B0%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%89.html'>第零章 真的从零开始（建议跳到第一章）</a></p>
+<p>在这个教程中，我将假定你<strong>啥都不会</strong>（当然要会用 Blender），从零开始讲解如何使用三渲二材质节点组，来快速方便的搭建三渲二材质。我将使用适用于 Blender 3.3 LTS 的 0.4.4 版本三渲二材质节点组，文件 <a data-from-md title='https://vientostudio.github.io/%E4%B8%89%E6%B8%B2%E4%BA%8C%E5%AE%8C%E5%85%A8%E6%89%8B%E5%86%8C/resources/CartoonShader-0.4.4-3.3LTS.blend' href='https://vientostudio.github.io/%E4%B8%89%E6%B8%B2%E4%BA%8C%E5%AE%8C%E5%85%A8%E6%89%8B%E5%86%8C/resources/CartoonShader-0.4.4-3.3LTS.blend'>CartoonShader-0.4.4-3.3LTS.blend</a>。</p>
 <p>（真的，球球大家都用 Blender 3.3 LTS 吧，作为技术美术不想再被版本转换的奇葩Bug折磨了。）</p>
 <p>上一章：<a data-from-md title='https://vientostudio.github.io/%E4%B8%89%E6%B8%B2%E4%BA%8C%E5%AE%8C%E5%85%A8%E6%89%8B%E5%86%8C/%E6%9D%90%E8%B4%A8%E5%92%8C%E5%85%89%E7%85%A7/%E7%AE%80%E4%BB%8B.html' href='https://vientostudio.github.io/%E4%B8%89%E6%B8%B2%E4%BA%8C%E5%AE%8C%E5%85%A8%E6%89%8B%E5%86%8C/%E6%9D%90%E8%B4%A8%E5%92%8C%E5%85%89%E7%85%A7/%E7%AE%80%E4%BB%8B.html'>材质和光照/简介</a>　<a data-from-md title='https://vientostudio.github.io/%E4%B8%89%E6%B8%B2%E4%BA%8C%E5%AE%8C%E5%85%A8%E6%89%8B%E5%86%8C/%E7%9B%AE%E5%BD%95.html' href='https://vientostudio.github.io/%E4%B8%89%E6%B8%B2%E4%BA%8C%E5%AE%8C%E5%85%A8%E6%89%8B%E5%86%8C/%E7%9B%AE%E5%BD%95.html'>目录</a>　下一章：<a data-from-md title='https://vientostudio.github.io/%E4%B8%89%E6%B8%B2%E4%BA%8C%E5%AE%8C%E5%85%A8%E6%89%8B%E5%86%8C/%E6%9D%90%E8%B4%A8%E5%92%8C%E5%85%89%E7%85%A7/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E6%9E%97%E5%AE%9D%E4%B8%89%E6%B8%B2%E4%BA%8C%E6%9D%90%E8%B4%A8%E6%95%99%E7%A8%8B/%E7%AC%AC%E9%9B%B6%E7%AB%A0%20%E7%9C%9F%E7%9A%84%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%EF%BC%88%E5%BB%BA%E8%AE%AE%E8%B7%B3%E5%88%B0%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%89.html' href='https://vientostudio.github.io/%E4%B8%89%E6%B8%B2%E4%BA%8C%E5%AE%8C%E5%85%A8%E6%89%8B%E5%86%8C/%E6%9D%90%E8%B4%A8%E5%92%8C%E5%85%89%E7%85%A7/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E6%9E%97%E5%AE%9D%E4%B8%89%E6%B8%B2%E4%BA%8C%E6%9D%90%E8%B4%A8%E6%95%99%E7%A8%8B/%E7%AC%AC%E9%9B%B6%E7%AB%A0%20%E7%9C%9F%E7%9A%84%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%EF%BC%88%E5%BB%BA%E8%AE%AE%E8%B7%B3%E5%88%B0%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%89.html'>第零章 真的从零开始（建议跳到第一章）</a></p>
 </div></div>
